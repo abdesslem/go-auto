@@ -1,7 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"go-auto/crawler"
+	"log"
+)
 
 func main() {
-	fmt.Print("Hello")
+	blogTitles, err := crawler.GetLatestBlogTitles("https://golangcode.com")
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Println("Blog Titles:")
+	fmt.Printf(blogTitles)
+
 }
