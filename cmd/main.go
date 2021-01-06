@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	crawler.Justatestcase()
 	blogTitles, err := crawler.GetLatestBlogTitles("https://golangcode.com")
 	if err != nil {
 		log.Println(err)

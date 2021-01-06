@@ -1,10 +1,52 @@
 package crawler
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/PuerkitoBio/goquery"
 )
+
+type WebPage struct {
+	name      string
+	url       string
+	searchURL string
+	useProxy  bool
+}
+
+type Leboncoin struct {
+	webpage WebPage
+	another string
+}
+
+type Lacentrale WebPage
+
+type Scrapper interface {
+	scrape()
+}
+
+func (wp *WebPage) scrape() {
+	fmt.Print("Go scrape")
+}
+
+func (lbc *Leboncoin) scrape() {
+	fmt.Print("Go scrape")
+}
+
+var aweb WebPage = WebPage{
+	"leboncoin",
+	"https://leboncoin.fr",
+	"searchhttp",
+	true,
+}
+
+func Justatestcase() {
+	tt := Leboncoin{
+		aweb,
+		"another",
+	}
+	fmt.Print(tt)
+}
 
 // GetLatestBlogTitles gets the latest blog title headings from the url
 // given and returns them as a list.
