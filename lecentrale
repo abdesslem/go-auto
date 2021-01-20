@@ -1,0 +1,1484 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8">
+<script src="https://www.lacentrale.fr/static/fragment-mozart/2.3.6-require.js" crossorigin></script>
+<script>var Pipe=(function(e,n){function t(){for(var e,n=c.length-1;n>=0;n--)if((e=c[n]).hasAttribute("data-pipe"))return e.removeAttribute("data-pipe"),e}function o(){0!==l.length||!e.readyState||"complete"!==e.readyState&&"interactive"!==e.readyState||h.onDone()}function r(e){return"object"==typeof e&&"function"==typeof e.then}function i(e,n,t,i){h.onBeforeInit(t,i);var a=e(n),f=function(){l.pop(),h.onAfterInit(t,i),o(t)};r(a)?a.then(f).catch(f):f()}function a(e,t){!1 in n||p.push({name:e,duration:Number(t),entryType:"tailor",startTime:n.now()||Date.now()-n.timing.navigationStart})}function f(e){return function(n){h[e]=n}}var d={},u={},c=e.getElementsByTagName("script"),l=[],p=[],s=function(){},h={onStart:s,onBeforeInit:s,onAfterInit:s,onDone:s};return{placeholder:function(e){d[e]=t()},start:function(e,n,o){u[e]=t(),n&&(l.push(e),h.onStart(o,e),require([n]))},end:function(e,n,r){var a,f=d[e],c=u[e],p=t(),s=c;if(f){do{a=s,s=s.nextSibling,f.parentNode.insertBefore(a,f)}while(a!==p);f.parentNode.removeChild(f)}for(a=c.nextSibling;a&&1!==a.nodeType;)a=a.nextSibling;a===p&&(a=void 0),c.parentNode.removeChild(c),p.parentNode.removeChild(p),n&&require([n],function(n){var t=n&&n.__esModule?n.default:n;if("function"!=typeof t)return l.pop(),h.onBeforeInit(r,e),h.onAfterInit(r,e),void o();i(t,a,r,e)})},loadCSS:/* @preserve - loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+function(n){function t(n){if(e.body)return n();setTimeout(function(){t(n)})}function o(){i.addEventListener&&i.removeEventListener("load",o),i.media="all"}var r,i=e.createElement("link"),a=(e.body||e.getElementsByTagName("head")[0]).childNodes;r=a[a.length-1];var f=e.styleSheets;i.rel="stylesheet",i.href=n,i.media="only x",t(function(){r.parentNode.insertBefore(i,r.nextSibling)});var d=function(e){for(var n=i.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){d(e)})};return i.addEventListener&&i.addEventListener("load",o),i.onloadcssdefined=d,d(o),i},onStart:f("onStart"),onBeforeInit:f("onBeforeInit"),onAfterInit:f("onAfterInit"),onDone:f("onDone"),addPerfEntry:a,addTTFMPEntry:function(e){a("ttfmp",e)},getEntries:function(){return p}}})(window.document,window.performance);</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/commons-691b5b2f.css"><script data-pipe>Pipe.start(0)</script>
+<script src="https://polyfill.io/v2/polyfill.min.js?features=fetch,Promise,Array.from,Element.prototype.remove,Element.prototype.prepend&flags=gated"></script>
+<script src="/static/fragment-mozart/mozart2.js"></script>
+<script src="https://browser.sentry-cdn.com/5.24.2/bundle.min.js" integrity="sha384-8x1Z8KjWCA4KJ7mh5cTEtm1Jngg4yEZDYTAU3A4HfHdtaiCYba4cCuJDHQ3zc2Qe" crossorigin="anonymous"></script>
+<script>(function(){}())</script>
+<script>
+    (function(d) {
+      require.config({
+        waitSeconds: 45
+      });
+      require(d);
+      const dependencies = [
+        'react',
+        'react-dom',
+        'jquery',
+        'prop-types',
+        'cbm-auth',
+        'cbm-helpers',
+        'cbm-popins',
+        'mobile-detect',
+        '@axel-springer-kugawana/cbm-libs-logging',
+        '@axel-springer-kugawana/cbm-lc-storybook'
+      ]
+      while (i = dependencies.pop())(function(dep) {
+        define(dep, d, function(b) {
+          return b[dep];
+        })
+      })(i);
+    }(['https://www.lacentrale.fr/static/fragment-layout/commons-691b5b2f.js']));
+    </script>
+<script data-pipe>Pipe.end(0)</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/classified-f1f0472d.css"><script data-pipe>Pipe.start(1, "https://www.lacentrale.fr/static/fragment-layout/head-f1f0472d.js", {"primary":false,"id":1,"range":[1,1]})</script>
+<!--[if IE]>
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.lacentrale.fr/static/assets/favicon/favicon.ico" />
+<![endif]-->
+<link rel="icon" type="image/jpeg" sizes="16x16" href="https://www.lacentrale.fr/static/assets/favicon/favicon-16x16.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.lacentrale.fr/static/assets/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.lacentrale.fr/static/assets/favicon/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.lacentrale.fr/static/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="https://www.lacentrale.fr/static/assets/favicon/site.webmanifest">
+<meta name="msapplication-config" content="https://www.lacentrale.fr/static/assets/favicon/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="format-detection" content="telephone=no">
+<script>
+  var fragmentHeadLocals = '{"isTestPage":false,"vertical":"auto","site":{"commandersAct":{"label":"LC"},"appTracker":{"label":"LC"}},"page":{"id":"classified","section":"classified","xiti":{"mvTesting":{}}}}';
+</script>
+<script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  (function(w, d, e, u, c, g, a, b){
+    w["SSJSConnectorObj"] = w["SSJSConnectorObj"] || {ss_cid : c, domain_info: g};
+    a = d.createElement(e);
+    a.async = true;
+    a.src = u;
+    b = d.getElementsByTagName(e)[0];
+    b.parentNode.insertBefore(a, b);
+
+  })(window,document,"script","https://cdn.perfdrive.com/aperture/aperture.js","81b2","auto");
+
+  googletag.pubads().addEventListener("slotRenderEnded", function (e) {
+    if (e.isEmpty || e.advertiserId == csm_advertiser_id) { // check if GAM returned an ad or returned a fallback ad (noads.js)
+        window.ADNXSMediation && window.ADNXSMediation.noAd(); // if true, send no ad signal to display 2nd highest bid
+    }
+  });
+
+  try {
+    var googleOptions = localStorage.getItem('googleOptions');
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function(){
+        googletag.pubads().setRequestNonPersonalizedAds(googleOptions);
+        googletag.pubads().refresh(); 
+    });
+  } catch (e) {
+    // localStorage access denied ("Block third-party cookies and site data" is checked by user)
+  }
+
+</script>
+<script data-pipe>Pipe.end(1, "https://www.lacentrale.fr/static/fragment-layout/head-f1f0472d.js", {"primary":false,"id":1,"range":[1,1]})</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/tracking-f1f0472d.css"><script data-pipe>Pipe.start(2, "https://www.lacentrale.fr/static/fragment-layout/tracking-f1f0472d.js", {"primary":false,"id":2,"range":[2,2]})</script>
+<title>BMW SERIE 1 (F20) (2) 116I M SPORT 2019 ESSENCE occasion - Nogent le phaye - Eure-et-Loir 28</title><meta name="description" content="Prix de vente : BMW SERIE 1 Eure-et-Loir : 20 900 € pour un kilométrage de 17 800 km.  Vendeur particulier : contactez-le en toute sécurité sur le site de La Centrale &amp;reg;"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><meta name="verify-v1" content="Dki2GpTFbWZH7OOre7BrGKprfieJajwZfD9gIFcsj/4="/><meta name="HandheldFriendly" content="true"/><meta name="referrer" content="unsafe-url"/><meta property="og:title" content="BMW SERIE 1 (F20) (2) 116I M SPORT 2019 ESSENCE occasion - Nogent le phaye - Eure-et-Loir 28"/><meta property="og:type" content="article"/><meta property="og:url" content="https://www.lacentrale.fr/auto-occasion-annonce-87101918863.html"/><meta property="og:image" content="https://image.lacentrale.fr/852x640/W101918863_STANDARD_0.jpg"/><meta property="og:description" content="En vente sur LaCentrale BMW SERIE 1 F20 5 PORTES (F20) (2) 116I M SPORT, 20 900 € , 17800 km, 109 cv, 2019"/><link rel="alternate" href="android-app://fr.carboatmedia.lacentrale/http/www.lacentrale.frhttps://www.lacentrale.fr/classified"/>
+<label id="trackingStateContainer" style="display: none;">{"seller":{"ref":"C041274","type":"CENTRE_MULTIMARQUES","showroomId":2,"city":"NOGENT LE PHAYE","siret":"80421052400018"},"vehicle":{"vertical":"auto","price":{"price":20900,"isCrossed":false,"isDropping":false},"options":[{"label":"Airbags latéraux"},{"label":"Ampoules de phares LED"},{"label":"Finition M Sport avec Pack M Sport Shadow"},{"label":"Aide au démarrage en côte"},{"label":"Bluetooth inclut musique en streaming, connexion téléphone"},{"label":"Air conditionné auto"},{"label":"Antibrouillards avant"},{"label":"Assistance au freinage d'urgence"},{"label":"Volant multi-fonction"},{"label":"Feux de route à LED"},{"label":"Système de navigation info trafic"},{"label":"Bouton démarrage"},{"label":"Antipatinage"},{"label":"Crochet d'attelage avec rotule amovible"},{"label":"Système de navigation"},{"label":"Régulateur de vitesse"},{"label":"Réglage du volant en hauteur, en profondeur"},{"label":"Système audio CD"},{"label":"Phares à allumage automatique"},{"label":"Bluetooth"},{"label":"Volant alu & cuir"},{"label":"Freins régénérateurs"},{"label":"Pneus roulage à plat"},{"label":"non fumeur"},{"label":"ESP"},{"label":"6 airbags"},{"label":"Sièges avant avec soutien lombaire"},{"label":"Vitrage calorifuge arrière"},{"label":"Reconnaissance vocale"},{"label":"Sièges avant chauffants"},{"label":"Volant sport"},{"label":"Contrôle de freinage en courbe"},{"label":"Ouverture du coffre à distance"},{"label":"carnet d'entretien"},{"label":"Smart card / Smart key"},{"label":"6 haut-parleurs"},{"label":"Banquette arrière rabattable avec accoudoir central arrière"},{"label":"Caméra de recul"},{"label":"Tapis de sol"},{"label":"Rétroviseur jour/nuit"},{"label":"Essuie glace capteur de pluie"},{"label":"Airbags rideaux"},{"label":"Feux arrières à LED"},{"label":"Indicateur de sous-gonflage des pneus"},{"label":"Rétroviseurs extérieurs réglage électrique"},{"label":"Rétroviseurs extérieurs chauffants"},{"label":"Limiteur de vitesse"},{"label":"Climatisation automatique bi-zone"},{"label":"Taille écran multi-fonctions 6.5 pouces"},{"label":"Filet de séparation du coffre"},{"label":"ABS"},{"label":"Taille écran navigation 6.5 pouces"},{"label":"Accoudoir central avant"},{"label":"Ordinateur de bord"}],"make":"BMW","model":"SERIE 1","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","gearboxId":"MANUAL","energy":"ESSENCE","isRecoverableVAT":false,"year":"2019","externalColor":"blanc metal","firstHand":true,"doors":5,"zipcode":"28630","powerDIN":109,"ratedHorsePower":6,"mileage":17800,"fourWheels":false,"length":4329,"width":1765,"photos":[],"covidMeasures":["1","2","3","4","5"]},"classified":{"id":"87101918863","ref":"W101918863","ownerCorrelationId":"C041274","hasPriority":true,"hasColorOption":false,"hasBoldOption":false,"hasPicture":false,"hasPhoto360":false,"hasVisideoOption":false,"url":"https://www.lacentrale.fr/auto-occasion-annonce-87101918863.html","notFound":false,"priceIsDropping":false}}</label>
+<script>
+        window.fragment_tracking_locals = {"isTestPage":false,"vertical":"auto","site":{"commandersAct":{"label":"LC"},"appTracker":{"label":"LC"}},"page":{"id":"classified","section":"classified","xiti":{"mvTesting":{}}}};
+        window.fragment_tracking_state = {"seller":{"ref":"C041274","type":"CENTRE_MULTIMARQUES","showroomId":2,"city":"NOGENT LE PHAYE","siret":"80421052400018"},"vehicle":{"vertical":"auto","price":{"price":20900,"isCrossed":false,"isDropping":false},"options":[{"label":"Airbags latéraux"},{"label":"Ampoules de phares LED"},{"label":"Finition M Sport avec Pack M Sport Shadow"},{"label":"Aide au démarrage en côte"},{"label":"Bluetooth inclut musique en streaming, connexion téléphone"},{"label":"Air conditionné auto"},{"label":"Antibrouillards avant"},{"label":"Assistance au freinage d'urgence"},{"label":"Volant multi-fonction"},{"label":"Feux de route à LED"},{"label":"Système de navigation info trafic"},{"label":"Bouton démarrage"},{"label":"Antipatinage"},{"label":"Crochet d'attelage avec rotule amovible"},{"label":"Système de navigation"},{"label":"Régulateur de vitesse"},{"label":"Réglage du volant en hauteur, en profondeur"},{"label":"Système audio CD"},{"label":"Phares à allumage automatique"},{"label":"Bluetooth"},{"label":"Volant alu & cuir"},{"label":"Freins régénérateurs"},{"label":"Pneus roulage à plat"},{"label":"non fumeur"},{"label":"ESP"},{"label":"6 airbags"},{"label":"Sièges avant avec soutien lombaire"},{"label":"Vitrage calorifuge arrière"},{"label":"Reconnaissance vocale"},{"label":"Sièges avant chauffants"},{"label":"Volant sport"},{"label":"Contrôle de freinage en courbe"},{"label":"Ouverture du coffre à distance"},{"label":"carnet d'entretien"},{"label":"Smart card / Smart key"},{"label":"6 haut-parleurs"},{"label":"Banquette arrière rabattable avec accoudoir central arrière"},{"label":"Caméra de recul"},{"label":"Tapis de sol"},{"label":"Rétroviseur jour/nuit"},{"label":"Essuie glace capteur de pluie"},{"label":"Airbags rideaux"},{"label":"Feux arrières à LED"},{"label":"Indicateur de sous-gonflage des pneus"},{"label":"Rétroviseurs extérieurs réglage électrique"},{"label":"Rétroviseurs extérieurs chauffants"},{"label":"Limiteur de vitesse"},{"label":"Climatisation automatique bi-zone"},{"label":"Taille écran multi-fonctions 6.5 pouces"},{"label":"Filet de séparation du coffre"},{"label":"ABS"},{"label":"Taille écran navigation 6.5 pouces"},{"label":"Accoudoir central avant"},{"label":"Ordinateur de bord"}],"make":"BMW","model":"SERIE 1","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","gearboxId":"MANUAL","energy":"ESSENCE","isRecoverableVAT":false,"year":"2019","externalColor":"blanc metal","firstHand":true,"doors":5,"zipcode":"28630","powerDIN":109,"ratedHorsePower":6,"mileage":17800,"fourWheels":false,"length":4329,"width":1765,"photos":[],"covidMeasures":["1","2","3","4","5"]},"classified":{"id":"87101918863","ref":"W101918863","ownerCorrelationId":"C041274","hasPriority":true,"hasColorOption":false,"hasBoldOption":false,"hasPicture":false,"hasPhoto360":false,"hasVisideoOption":false,"url":"https://www.lacentrale.fr/auto-occasion-annonce-87101918863.html","notFound":false,"priceIsDropping":false}};
+        var fragment_tracking_locals = window.fragment_tracking_locals;
+        var fragment_tracking_state = window.fragment_tracking_state;
+      </script>
+<script data-pipe>Pipe.end(2, "https://www.lacentrale.fr/static/fragment-layout/tracking-f1f0472d.js", {"primary":false,"id":2,"range":[2,2]})</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/header-f1f0472d.css"><link rel="stylesheet" href="https://www.lacentrale.fr//static/fragment-recherche-front/priceNotificationPopin.78d415a6.css"><link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-contact/seller-contact-eaa24a2f.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" class="hide"/><link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-contact/carousel-eaa24a2f.css"><link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-classified/general-informations-6c026f03.css"></head>
+<body class="CBM_page CBM_page_classified">
+<section class="containerGlobal">
+<script data-pipe>Pipe.start(3, "https://www.lacentrale.fr/static/fragment-layout/header-f1f0472d.js", {"primary":false,"id":3,"range":[3,3]})</script><script>window.placeAdButtonState = {"sellingUrl":"https://www.lacentrale.fr/vendre-voiture"}</script>
+<div class="habillageContainer2 hiddenPhone cbm--hiddenPrint">
+<div data-pub-appnexus="Habillage" class="habillageContainer"></div>
+</div>
+<div data-pub-appnexus="Interstitiel" class="interstitielContainer txtC cbm--hiddenPrint"></div>
+<p class="containerSite upSystem cbm--hiddenPrint">
+<a href="#top" name="top" id="top"></a>
+</p>
+<div id="ss_098786_234239_238479_190541"></div>
+<div class="containerNavMobile cbm--hiddenPrint">
+<nav class="navMobile cbm--onlyPhone">
+<ul>
+<li>
+<a class="cbm-btn--3 cbm-btn--openMobileMenu" rel="nofollow" href="javascript:;">
+<span>
+<i class="iconLine"></i>
+<i class="iconLine"></i>
+<i class="iconLine"></i>
+</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--3 btSearchMobile " href="https://www.lacentrale.fr/listing">
+<i class="cbm-picto--zoomWhite scale90"></i>
+<span class="counterBadge hidden badgeCriteriaNumber">12</span>
+</a>
+</li>
+</ul>
+<span class="logoForMobile">
+<a href="https://www.lacentrale.fr" class="logoLink">
+<img src="https://www.lacentrale.fr/static/fragment-layout/logo_lacentrale-574bc3ad.png" alt="La Centrale, 1er site de véhicules d&#x27;occasion" class="vMiddle logo"/>
+</a>
+</span>
+<ul class="toolbarMobileRight">
+<li>
+<a class="cbm-btn--3" rel="nofollow" href="https://www.lacentrale.fr/panier.php">
+<i class="cbm-picto--favActiveWhite scale90"></i>
+</a>
+</li>
+<li id="PopinAuthenticationMobile">
+<a class="cbm-btn--3 cbm-btn--accountAccess" rel="nofollow">
+<i class="cbm-picto--accountWhite scale90"></i>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<header class="containerHeader">
+<section class="containerBanner">
+<section class="containerSite">
+<div class="jsAppnexusBanner">
+&nbsp;
+</div>
+<div class="expresswayContainer hiddenPhone jsOneAd">
+<div class="stationContainer">
+<div data-pub-appnexus="Station1"></div>
+<div data-pub-appnexus="Station2"></div>
+<div data-pub-appnexus="Station3"></div>
+<div data-pub-appnexus="Station4"></div>
+</div>
+</div>
+</section>
+</section>
+<div class="containerBaselineAndMenu">
+<section class="containerBaseline hiddenPhone">
+<section class="containerSite">
+<div class="floatL logoContainer">
+<a class="logoLink" href="https://www.lacentrale.fr">
+<img class="vMiddle logo" id="logo" src="https://www.lacentrale.fr/static/fragment-layout/logo_lacentrale-574bc3ad.png" alt="La Centrale, 1er site de véhicules d&#x27;occasion" width="182" height="41"/>
+<span class="cbm--onlyDesktop cbm--hiddenPrint mL15 cbm-size--1 baseLineTxt">
+1er site de véhicules d&#x27;occasion
+</span>
+</a>
+</div>
+<section class="baselineMenu cbm--hiddenPrint">
+<span class="DropdownMenu" id="AccountDropdownMenu">
+<span id="PopinAuthentication">
+</span>
+<span class="DropdownMenu__menu">
+<div class="cpt-part-menu">
+<div class="cbm--onlyPhone floatR mR15">
+<span class="triangle triangleB vMiddle"></span>
+</div>
+<ul>
+<li class="Customer__privatePerson Customer__hasAds ">
+<a href="https://www.lacentrale.fr/compte_menu.php?mod=1&pro=&service=" rel="nofollow" data-xtclick='{"label":"PART::Mes_annonces", "typeClick":"navigation"}'>
+Mes annonces
+</a>
+</li>
+<li class="">
+<a href="https://messagerie.lacentrale.fr" rel="nofollow" data-xtclick='{"label":"PART::Mes_emails_recus", "typeClick":"navigation"}'>
+Ma messagerie
+</a>
+</li>
+<li class="Customer__privatePerson myProfilLink ">
+<a href="https://www.lacentrale.fr/compte_update.php?mod=1&what=ident&back=compte_menu.php" rel="nofollow" data-xtclick='{"label":"PART::Mon_profil", "typeClick":"navigation"}'>
+Mon profil
+</a>
+</li>
+<li class="">
+<a href="https://www.lacentrale.fr/compte/notification/recherche" rel="nofollow" data-xtclick='{"label":"PART::Mes_alertes", "typeClick":"navigation"}'>
+Mes recherches
+</a>
+</li>
+<li class="">
+<a href="https://www.lacentrale.fr/compte/notification/prix" rel="nofollow" data-xtclick='{"label":"PART::Mes_alertes_prix", "typeClick":"navigation"}'>
+Mes alertes prix
+</a>
+</li>
+<li class="">
+<a href="https://www.lacentrale.fr/panier.php" rel="nofollow" data-xtclick='{"label":"PART::Mes_favoris", "typeClick":"navigation"}'>
+Mes favoris
+</a>
+</li>
+<li class="Customer__privatePerson"><a href="https://www.lacentrale.fr/vendre-voiture.php#prices"> Tarifs </a></li>
+<li class="Customer__privatePerson"><a href="https://www.lacentrale.fr/vendre-voiture.php"> D&eacute;poser une annonce </a></li>
+<li class="logoutLink">
+<a href="https://depot.lacentrale.fr/logout" rel="nofollow">
+<span class="cbm-picto--disconnect"></span>
+<span>Se déconnecter</span>
+</a>
+</li>
+</ul>
+</div>
+</span>
+</span>
+<span class="DropdownMenu --hasDropdownMenu" id="BookmarkDropdownMenu">
+<span class="DropdownMenu__icon circ circ30">
+<i class="cbm-picto--favActiveWhite scale80"></i>
+</span>
+<span class="DropdownMenu__label">
+Mes favoris
+<span class="DropdownMenu__count cbm-txt--1"></span>
+</span>
+<span class="DropdownMenu__menu"></span>
+</span>
+<a class="cbm-btn--2 cbm-btn--depotMenu noBold Customer__depositLink cbm--hiddenPrint" href="https://www.lacentrale.fr/vendre-voiture" title="Déposer une annonce de voiture d&#x27;occasion" data-xtclick="{&quot;label&quot;:&quot;Header::deposer_votre_annonce&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}" data-reactroot=""><span><span class="cbm-bullet--plus">+</span>Publier une annonce gratuitement</span></a>
+</section>
+</section>
+</section>
+<nav class="containerMenu hiddenPhone cbm--hiddenPrint">
+<section class="containerSite relative">
+<ul class="rubLinks">
+<li class="hiddenTablet ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::accueil&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/" title="Achat et vente voiture d&#x27;occasion">
+Accueil
+</a>
+</li>
+<li class="toSearchMobile ">
+<a class="Customer__depositLink" data-xtclick="{&quot;label&quot;:&quot;Header::vendre&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/vendre-voiture" title="Déposer une annonce de voiture d&#x27;occasion">
+Vendre
+</a>
+</li>
+<li class=" cbm--active">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::rechercher&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/listing" title="Rechercher une voiture d&#x27;occasion">
+Rechercher
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::cote&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/lacote_origine.php" title="Cote gratuite, argus gratuit de voitures d&#x27;occasion">
+Cote
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::fiches_techniques&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/fiche-technique-auto.php" title="Fiches techniques voitures d&#x27;occasion">
+Fiches techniques
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::services&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/services?vertical&#x3D;auto" title="Assurance, financement...">
+Services
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::conseils&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/conseils/" title="Mieux acheter et mieux vendre une voiture d&#x27;occasion">
+Conseils
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::annuaire_des_pros&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/pro_list.php?rubrique&#x3D;VEHICULES" title="Les vitrines des professionnels de l&#x27;occasion">
+<span class="hiddenTablet">Annuaire des professionnels</span>
+<span class="cbm--onlyTablet">Professionnels</span>
+</a>
+</li>
+</ul>
+</section>
+</nav>
+</div>
+</header>
+<script data-pipe>Pipe.end(3, "https://www.lacentrale.fr/static/fragment-layout/header-f1f0472d.js", {"primary":false,"id":3,"range":[3,3]})</script>
+<section class="containerSite containerContent">
+<script data-pipe>Pipe.start(4, "https://www.lacentrale.fr//static/fragment-recherche-front/priceNotificationPopin.1cae4595.js", {"primary":false,"id":4,"range":[4,4]})</script><div id="recherche-react-priceNotificationPopin"></div><script>window.__PRELOADED_STATE_PRICE_NOTIFICATION_POPIN__ = {"device":{"deviceType":null,"deviceOS":null,"browserIsEdge":false},"pageMode":{"mode":"priceNotificationPopin","page":null},"jwt":{"accessToken":null,"userCorrelationId":null,"isAuthenticated":false,"isCbmUser":false,"isPro":false,"visitorId":null},"notification":{"hits":[],"searchToSave":{"reference":"W101918863","initialPrice":"20900","vertical":"carTruck"},"emailAlert":false,"status":null,"notificationType":"search","currentHash":null},"_persist":{"version":-1,"rehydrated":false}}</script><script data-pipe>Pipe.end(4, "https://www.lacentrale.fr//static/fragment-recherche-front/priceNotificationPopin.1cae4595.js", {"primary":false,"id":4,"range":[4,4]})</script>
+<div class="cbm-classifiedTop">
+<div class="cbm-breadcrumb-navigation">
+<script data-pipe>Pipe.start(5, "https://www.lacentrale.fr//static/fragment-recherche-front/detailBreadcrumbNavigation.7a3f42ae.js", {"primary":false,"id":5,"range":[5,5]})</script><div id="recherche-react-detailBreadcrumbNavigation"><div><div><nav class="cbm-breadcrumb"><ol itemscope="" itemType="http://schema.org/BreadcrumbList"><li itemscope="" itemProp="itemListElement" itemType="http://schema.org/ListItem"><a href="/" itemProp="item" data-xtclick="{&quot;label&quot;:&quot;filAriane&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}"><span itemProp="name">Accueil</span></a><meta itemProp="position" content="1"/></li><li itemscope="" itemProp="itemListElement" itemType="http://schema.org/ListItem"><a href="/voiture-occasion-berline.html" itemProp="item" data-xtclick="{&quot;label&quot;:&quot;filAriane&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}"><span itemProp="name">Berline occasion</span></a><meta itemProp="position" content="2"/></li><li itemscope="" itemProp="itemListElement" itemType="http://schema.org/ListItem"><a href="/occasion-voiture-marque-bmw.html" itemProp="item" data-xtclick="{&quot;label&quot;:&quot;filAriane&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}"><span itemProp="name">Bmw occasion</span></a><meta itemProp="position" content="3"/></li><li itemscope="" itemProp="itemListElement" itemType="http://schema.org/ListItem"><a href="/voiture-occasion-bmw-serie+1-serie+1+f20+5+portes.html" itemProp="item" data-xtclick="{&quot;label&quot;:&quot;filAriane&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}"><span itemProp="name">Bmw Serie 1 f20 5 portes</span></a><meta itemProp="position" content="4"/></li><li itemscope="" itemProp="itemListElement" itemType="http://schema.org/ListItem"><a href="/region/occasion-voiture-modele-bmw-serie+1-centre.html" itemProp="item" data-xtclick="{&quot;label&quot;:&quot;filAriane&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}"><span itemProp="name">Centre</span></a><meta itemProp="position" content="5"/></li><li itemscope="" itemProp="itemListElement" itemType="http://schema.org/ListItem"><a href="/departement/occasion-voiture-modele-bmw-serie+1-eure-et-loir-28.html" itemProp="item" data-xtclick="{&quot;label&quot;:&quot;filAriane&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}"><span itemProp="name">Eure-et-Loir</span></a><meta itemProp="position" content="6"/></li></ol></nav><nav class="cbm-navClassified"><a class="cbm-btn--4 cbm-navClassified__btnBackList cbm--disabled" data-xtclick=" {&quot;label&quot;:&quot;retour_annonces&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}" rel="nofollow"><span>Retour</span></a><a class="cbm-btn--4 cbm-navClassified__btnPrevious cbm--disabled" data-xtclick=" {&quot;label&quot;:&quot;annonce_precedente&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}" rel="nofollow"><span>&lt; Précédent</span></a><a class="cbm-btn--4 cbm-navClassified__btnNext cbm--disabled" data-xtclick=" {&quot;label&quot;:&quot;annonce_suivante&quot;, &quot;typeClick&quot;:&quot;navigation&quot;, &quot;autoPrefix&quot;:&quot;true&quot;}" rel="nofollow"><span>Suivant &gt;</span></a></nav></div></div></div><script>window.__PRELOADED_STATE_BREADCRUMB_NAVIGATION__ = {"geolocation":{"coords":null,"zipcode":null,"geolocationError":null,"source":null},"jwt":{"accessToken":null,"userCorrelationId":null,"isAuthenticated":false,"isCbmUser":false,"isPro":false,"visitorId":null},"detailNavigation":{"query":{},"hits":[],"hitsPrev":[],"hitsNext":[],"total":null,"pageSize":null,"seed":null,"id":"87101918863","urlListing":null,"urlPrev":null,"urlNext":null},"detailBreadcrumb":{"category":"41_42","brand":"BMW","model":"SERIE 1","modelcom":"SERIE 1 F20 5 PORTES","vertical":"carTruck","zipcode":"28630"},"pageMode":{"mode":"detailBreadcrumbNavigation","page":null},"device":{"deviceType":null,"deviceOS":null,"browserIsEdge":false},"_persist":{"version":-1,"rehydrated":true}}</script><script data-pipe>Pipe.end(5, "https://www.lacentrale.fr//static/fragment-recherche-front/detailBreadcrumbNavigation.7a3f42ae.js", {"primary":false,"id":5,"range":[5,5]})</script>
+</div>
+<div class="cbm-toolboxButtons">
+<script data-pipe>Pipe.start(6, "https://www.lacentrale.fr/static/fragment-contact/toolbox-buttons-eaa24a2f.js", {"primary":false,"id":6,"range":[6,6]})</script><script>
+  window.fragment_toolbox = {"classified_ref":"W101918863","classified_owner_correlation_id":"C041274"};
+</script>
+<span>
+Publié depuis : <strong>23 jours</strong>
+</span>
+<a href="javascript:void(0);" class="switchFavAddDetail" rel="nofollow" data-classified-reference="W101918863" title="Ajouter/retirer aux favoris">
+<span class="cbm-picto--favAddDark"></span>
+</a>
+<a href="javascript:void(0);" class="switchShare" rel="nofollow" data-classified-reference="W101918863" data-xtclick='{"label": "detailPA::partage::selection", "typeClick":"action"}' title="Envoyer cette annonce">
+<span class="cbm-picto--share"></span>
+</a>
+<div class="cbm-popin--container hide">
+<div class="cbm-tab">
+<ul class="cbm-tab__list">
+<li>
+<a rel="nofollow" href="#shareBySms" class="active">Par SMS</a>
+</li>
+<li><a rel="nofollow" href="#shareByEmail">Par email</a></li>
+<li><a rel="nofollow" href="#shareByFacebook">Facebook</a></li>
+</ul>
+<div class="cbm-tab__content">
+<div id="shareBySms" class="cbm-tab__tab cbm-tab__center hide">
+<div class="cbm-tab__content">
+<form id="shareBySmsForm" action="https://www.lacentrale.fr/api/sms/send.php" method="get">
+<input type="hidden" name="mode" value="save_send">
+<input type="hidden" name="brand" value="BMW">
+<input type="hidden" name="model" value="SERIE 1">
+<input type="hidden" name="price" value="20900">
+<input type="hidden" name="adLink" value="auto-occasion-annonce-87101918863.html">
+<div class="cbm-fieldWrapper">
+<label for="phone">Saisissez votre numéro de téléphone portable</label>
+<div class="cbm-input--1 tabInputContainer">
+<input id="phone" name="phone" type="text" required>
+</div>
+</div>
+<button type="submit" id="sendSmsButton" class="sendSmsButton cbm-btn--1">Envoyer</button>
+</form>
+</div>
+<div class="cbm-tab__alert"></div>
+</div>
+<div id="shareByEmail" class="cbm-tab__tab cbm-shareContactForm__wrapper hide">
+<div class="cbm-tab__alert"></div>
+<div class="cbm-tab__content">
+<form action="https://lc-contact.carboatservices.fr/classified-share-by-email" method="POST" id="shareByEmailForm" name="isc" novalidate>
+<input type="hidden" name="event" value="send">
+<input type="hidden" name="classifiedId" value="87101918863">
+<input type="hidden" name="vertical" value="auto">
+<input type="hidden" name="subject" value="Un proche vous envoie cette annonce pour une BMW SERIE 1">
+<input type="hidden" name="price" value="20900">
+<input type="hidden" name="make" value="BMW">
+<input type="hidden" name="model" value="SERIE 1">
+<input type="hidden" name="version" value="(F20) (2) 116I M SPORT">
+<input type="hidden" name="mileage" value="17800">
+<input type="hidden" name="currentClassifiedUrl" value="https://www.lacentrale.fr/auto-occasion-annonce-87101918863.html">
+<input type="hidden" name="similarClassifiedsUrl" value="https://www.lacentrale.fr/voiture-occasion-bmw-serie+1-serie+1+f20+5+portes.html">
+<input type="hidden" name="dateStamp" value="20210102">
+<input type="hidden" name="recaptchaResponse" id="recaptcha-input">
+<div class="cbm-fieldWrapper">
+<label class="cbm-radio--3" for="madame">
+<input class="" type="radio" name="toTitle" id="madame" value="Mme"/>
+<div class="checkmark"></div>
+<span>Mme</span>
+</label>
+<label class="cbm-radio--3" for="monsieur">
+<input class="" type="radio" name="toTitle" id="monsieur" value="M" checked="checked"/>
+<div class="checkmark"></div>
+<span>M.</span>
+</label>
+</div>
+<div class="classified-seller-contact-mail__coord">
+<div class="cbm-fieldWrapper">
+<div class="cbm-input--1">
+<input type="text" name="toLastName" value="" id="nom_dest" placeholder="Nom du destinataire *" required minlength="2"/>
+</div>
+</div>
+<div class="cbm-fieldWrapper">
+<div class="cbm-input--1">
+<input type="text" name="toFirstName" value="" id="prenom_dest" placeholder="Prénom du destinataire *" required minlength="2"/>
+</div>
+</div>
+</div>
+<div class="cbm-fieldWrapper">
+<div class="cbm-input--1">
+<input type="email" name="toEmail" value="" id="mail_dest" placeholder="Email du destinataire *" required />
+</div>
+</div>
+<div class="classified-seller-contact-mail__coord">
+<div class="cbm-fieldWrapper">
+<div class="cbm-input--1">
+<input type="text" name="fromLastName" value="" id="nom_exp" placeholder="Votre nom *" required minlength="2"/>
+</div>
+</div>
+<div class="cbm-fieldWrapper">
+<div class="cbm-input--1">
+<input type="text" name="fromFirstName" value="" id="prenom_exp" placeholder="Votre prénom *" required minlength="2"/>
+</div>
+</div>
+</div>
+<div class="cbm-fieldWrapper">
+<div class="cbm-input--1">
+<input type="email" name="fromEmail" value="" id="mail_exp" placeholder="Votre e-mail *" required />
+</div>
+</div>
+<div class="cbm-fieldWrapper">
+<div class="cbm-input--1">
+<textarea name="body" id="message" rows="7" placeholder="Votre message *" required></textarea>
+</div>
+</div>
+<div class="cbm-fieldWrapper">
+<div class="cbm-input--2">
+<div id="recaptcha"></div>
+</div>
+</div>
+<div class="cbm-shareContactForm__btnWrapper">
+<input type="reset" class="cbm-btn--4" data-close="popin" value="Annuler"/>
+<input type="submit" class="cbm-btn--1" id="sendMailButton" value="Envoyer"/>
+</div>
+</form>
+</div>
+</div>
+<div id="shareByFacebook" class="cbm-tab__tab cbm-tab__center hide">
+<a href="#" class="cbm-btn--facebook" data-xtclick='{"label": "detailPA::partage::facebook_ok", "typeClick":"action"}' onclick="window.open('http://www.facebook.com/sharer.php?u=https://www.lacentrale.fr/auto-occasion-annonce-87101918863.html#xtor=CS2-301122136-[Facebook]-[Annonce]&amp;v=', 'facebookWindow', 'height=380,width=660,resizable=0,toolbar=0,menubar=0,status=0,location=0,scrollbars=0'); return false;">Facebook</a>
+</div>
+</div>
+</div>
+<div id="Cnil" class="cbm-size--1 hide">
+<p>
+Les données que vous renseignez dans ce formulaire sont traitées par Groupe La Centrale en qualité de responsable de
+traitement. Elles sont transmises directement à la personne que vous avez souhaité contacter.
+</p>
+<p>
+Les données obligatoires sont celles signalées par un astérisque dans ce formulaire.
+</p>
+<p>
+Ces données sont utilisées à des fins de mise en relation avec la personne que vous souhaitez contacter.
+</p>
+<p>
+Vous disposez d’un droit d’accès, de rectification, d’effacement de ces données, d’un droit de limitation du
+traitement, d’un droit d’opposition, du droit à la portabilité de vos données et du droit d’introduite une
+réclamation auprès d’une autorité de contrôle (en France, la CNIL). Vous pouvez également retirer à tout moment
+votre consentement au traitement de vos données.
+</p>
+<p>
+Pour en savoir plus sur le traitement de vos données :
+</p>
+<dl>
+<dd>
+<p> <a href="https://www.lacentrale.fr/politiqueconfidentialite.php">www.lacentrale.fr/politiqueconfidentialite.php</a></p>
+</dd>
+</dl>
+</div>
+</div>
+<a href="javascript:print();" class="switchPrint" data-xtclick='{"label": "detailPA::Imprimer::selection", "typeClick":"action"}'>
+<span class="cbm-picto--print"></span>
+</a>
+<script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+<script data-pipe>Pipe.end(6, "https://www.lacentrale.fr/static/fragment-contact/toolbox-buttons-eaa24a2f.js", {"primary":false,"id":6,"range":[6,6]})</script>
+</div>
+</div>
+<div class="cbm-sideBar">
+<div class="cbm-sideBar__wrapper">
+<div class="cbm-mainInfos">
+<script data-pipe>Pipe.start(7, "https://www.lacentrale.fr/static/fragment-contact/main-informations-eaa24a2f.js", {"primary":true,"id":7,"range":[7,7]})</script><script>
+  window.fragment_main_informations = {"classified_ref":"W101918863","classified_owner_correlation_id":"C041274"};
+</script>
+<div class="cbm-title--page">
+BMW SERIE 1 F20 5 PORTES
+</div>
+<div class="cbm-price">
+<div>
+<span class="cbm-price__newPrice">
+<span class="cbm__priceWrapper">
+20 900&nbsp;&euro;
+</span>
+<div class="cbm-goodDeal cursorPointer" role="button" data-xtclick='{"label":"badge::bonne_affaire", "typeClick":"action", "autoPrefix":"true"}'>
+<span class="cbm-goodDeal__label">
+Bonne affaire
+</span>
+<span class="cbm-goodDeal__badge cbm-goodDeal__badge--4">
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+</span>
+<span class="cbm-qualityRate__infos">
+<span class="cbm-helpLink">
+?
+</span>
+</span>
+</div>
+<div class="cbm-popin--container hide">
+<div class="cbm-popin__qualityRateInfos cbm-size--2">
+<div>
+La Centrale vous informe sur le positionnement prix des annonces par rapport au prix moyen des annonces similaires.
+Plus le prix est en dessous du prix moyen, meilleure sera l'affaire.
+</div>
+<div class="cbm-popin__qualityRateInfos--mainTitle">Ces prix moyens :</div>
+<div class="cbm-popin__pointsTaken">
+<ul class="cbm-list--1">
+<li class="cbm-list__title">tiennent compte</li>
+<li>
+<i class="cbm-picto--valid"></i>des marque, modèle, génération du véhicule
+</li>
+<li>
+<i class="cbm-picto--valid"></i>de la version (avec les équipements standards de la version)
+</li>
+<li>
+<i class="cbm-picto--valid"></i>du carburant
+</li>
+<li>
+<i class="cbm-picto--valid"></i>de la boîte de vitesse
+</li>
+<li>
+<i class="cbm-picto--valid"></i>de la date de mise en circulation
+</li>
+<li>
+<i class="cbm-picto--valid"></i>du kilométrage réel
+</li>
+<li>
+<i class="cbm-picto--valid"></i>de la zone géographique
+</li>
+</ul>
+<ul class="cbm-list--1">
+<li class="cbm-list__title">ne tiennent pas compte</li>
+<li>
+<i class="cbm-picto--closeRed"></i>des options additionnelles
+</li>
+<li>
+<i class="cbm-picto--closeRed"></i>des garanties spécifiques
+</li>
+<li>
+<i class="cbm-picto--closeRed"></i>du nombre de propriétaires
+</li>
+<li>
+<i class="cbm-picto--closeRed"></i>de la couleur du véhicule
+</li>
+<li>
+<i class="cbm-picto--closeRed"></i>des réparations récemment effectuées ou à effectuer
+</li>
+<li>
+<i class="cbm-picto--closeRed"></i><div>d'un état éventuellement dégradé par rapport à une usure normale</div>
+</li>
+</ul>
+</div>
+<div class="cbm-popin__qualityRateInfos--title">
+Qualité du positionnement prix des annonces
+</div>
+<dl class="cbm-popin__qualityRateInfos--legend">
+<dt class="cbm-popin__qualityRateInfos--legendTitle">
+<div class='cbm-goodDeal'>
+<span class="cbm-goodDeal__label">
+Très bonne affaire
+</span>
+<span class="cbm-goodDeal__badge cbm-goodDeal__badge--5">
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+</span>
+</div>
+</dt>
+<dd>
+Le prix de l'annonce est très en-dessous de la moyenne des prix des véhicules similaires.
+</dd>
+<dt class="cbm-popin__qualityRateInfos--legendTitle">
+<div class='cbm-goodDeal'>
+<span class="cbm-goodDeal__label">
+Bonne affaire
+</span>
+<span class="cbm-goodDeal__badge cbm-goodDeal__badge--4">
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+</span>
+</div>
+</dt>
+<dd>
+Le prix de l'annonce est en-dessous de la moyenne des prix des véhicules similaires.
+</dd>
+<dt class="cbm-popin__qualityRateInfos--legendTitle">
+<div class='cbm-goodDeal'>
+<span class="cbm-goodDeal__label">
+Offre équitable
+</span>
+<span class="cbm-goodDeal__badge cbm-goodDeal__badge--3">
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+</span>
+</div>
+</dt>
+<dd>
+Le prix de l'annonce est dans la moyenne des prix des véhicules similaires.
+</dd>
+<dt class="cbm-popin__qualityRateInfos--legendTitle">
+<div class='cbm-goodDeal'>
+<span class="cbm-goodDeal__label">
+Au-dessus du marché
+</span>
+<span class="cbm-goodDeal__badge cbm-goodDeal__badge--2">
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+</span>
+</div>
+</dt>
+<dd>
+Le prix de l'annonce est supérieur à la moyenne des prix des véhicules similaires.
+<br/>Cela ne signifie pas forcément que le véhicule est trop cher, il peut avoir des options ou des garanties
+supplémentaires.
+Renseignez-vous auprès du vendeur.
+</dd>
+<dt class="cbm-popin__qualityRateInfos--legendTitle">
+<div class="cbm-goodDeal">
+<span class="cbm-goodDeal__label">
+Hors marché
+</span>
+<span class="cbm-goodDeal__badge cbm-goodDeal__badge--1">
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+</span>
+</div>
+</dt>
+<dd>
+Le prix de l'annonce est très supérieur à la moyenne des prix des véhicules similaires.
+<br>Le véhicule est sans doute rare ou peut être suréquipé ou très atypique. Renseignez-vous auprès du vendeur.
+</dd>
+<dt class="cbm-popin__qualityRateInfos--legendTitle">
+<div class='cbm-goodDeal'>
+<span class="cbm-goodDeal__label">
+Analyse indisponible
+</span>
+<span class="cbm-goodDeal__badge cbm-goodDeal__badge--0">
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+<span>&nbsp;</span>
+</span>
+</div>
+</dt>
+<dd>
+Les données ne sont pas suffisantes pour mesurer le positionnement prix de l'annonce.
+</dd>
+</dl>
+</div>
+</div>
+</span>
+<div class="cbm-price__wrapper">
+<a class="cbm-price__evol cbm--hiddenPrint switchPriceEvol cbm--hiddenPhone" href="javascript:;" title="Historique du prix" data-xtclick='{"label":"evol_Prix_NA_NA", "typeClick":"action", "autoPrefix":"true"}' data-make='BMW' data-model="SERIE 1 F20 5 PORTES">
+<i class="cbm-picto--statsDecrease"></i>
+</a>
+<a class="cbm-price__alert cbm--hiddenPrint switchPriceAlert" href="javascript:;" title="Alerte baisse de prix">
+<i class="cbm-picto--priceBell"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="cbm-assuFinance cbm--hiddenPrint">
+<div class="cbm-financeTxt">
+<a class="cbm-btn--4 cbm-financeTxt__link" target="_blank" rel="nofollow" href="https://www.sofinco.fr/gate.asp?q6&#x3D;020P21&amp;j7&#x3D;PUB22532" data-xtclick='{"label":"voir_financement", "typeClick":"exit", "autoPrefix":"true"}'>
+<span>Simulez le financement</span>
+</a>
+</div>
+<div class="cbm-assuTxt">
+<a class="cbm-btn--4 cbm-assuTxt__link" rel="nofollow" href="https://apps.meilleurtaux.com/auto/rollover/page0?utm_source&#x3D;lacentrale&amp;utm_campaign&#x3D;assurance_auto&amp;utm_content&#x3D;lien-detail-annonce&amp;utm_term&#x3D;lien_texte_produit&amp;utm_medium&#x3D;desktop" target="_blank" data-xtclick='{"label":"devis_assurance", "typeClick":"navigation", "autoPrefix":"true"}'>
+<span>
+Comparez les assurances
+</span>
+</a>
+</div>
+</div>
+<script>
+  window.consultedClassified = {
+    reference: 'W101918863'
+  };
+</script>
+<script data-pipe>Pipe.end(7, "https://www.lacentrale.fr/static/fragment-contact/main-informations-eaa24a2f.js", {"primary":true,"id":7,"range":[7,7]})</script>
+<script data-pipe>Pipe.start(8)</script> <div class="cbm-seller cbm-seller__pro">
+<div class="cbm-sellerType">
+<b>Contactez le vendeur professionnel</b>
+</div>
+<div class="cbm-sellerName">
+<a target="_blank" data-xtclick='{"label":"detailPA::vitrine::titre_colonne", "typeClick":"navigation"}' href="https://pros.lacentrale.fr/C041274/">
+<span>AVO SPORT</span></a> (dpt. 28)
+</div>
+</div>
+<script data-pipe>Pipe.end(8)</script>
+<div class="cbm-contactBtn cbm--hiddenPrint">
+<script data-pipe>Pipe.start(9, "https://www.lacentrale.fr/static/fragment-contact/seller-contact-eaa24a2f.js", {"primary":false,"id":9,"range":[9,9]})</script>
+<script>
+  window.fragment_seller_contact_tabs_state = {"mavoiturecashLink":"https://www.mavoiturecash.fr/#xtor=CS5-95-[LC_DetailPA_Reprise]-[auto]&utm_source=lacentrale&utm_medium=referral&utm_campaign=detailPA_ContactReprise","customerPublishedName":"AVO SPORT","customerReference":"C041274","referencePro":"20762","make":"BMW","model":"SERIE 1","version":"(F20) (2) 116I M SPORT","price":20900,"classifiedRef":"W101918863","classifiedOwnerCorrelationId":"C041274","eventCorrelationId":"979bojcyp4svoc4szsbbzm","classifiedId":"87101918863"};
+</script>
+<div class="message-covid">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<g fill="none" fill-rule="evenodd">
+<path fill-rule="nonzero" d="M11.504.65c.205-.183.51-.2.734-.041l.36.244.269.173.296.187c.74.459 1.553.918 2.415 1.346 1.734.862 3.435 1.485 5.011 1.769.615.11 1.201.168 1.757.168.308 0 .564.237.588.544l.005.078.012.323c.024.973-.047 2.217-.282 3.64-.378 2.293-1.11 4.558-2.284 6.68-1.763 3.188-4.393 5.813-8.014 7.674-.155.08-.338.086-.498.019-.095-.04-.26-.116-.488-.231l-.19-.098c-.321-.17-.67-.369-1.04-.599-1.265-.786-2.529-1.775-3.709-2.983C2.882 15.894.828 11.07 1.063 4.96c.013-.33.293-.584.622-.566l.153.004c.215.002.493-.005.824-.029.574-.04 1.195-.122 1.85-.255 1.789-.361 3.56-1.039 5.213-2.109.62-.4 1.214-.852 1.78-1.356zm.436 1.181l-.272.225c-.421.338-.855.65-1.302.94C8.581 4.15 6.672 4.88 4.746 5.27c-.913.185-1.72.274-2.382.3l-.137.004-.003.394c.016 5.209 1.834 9.352 4.881 12.56l.185.19c1.11 1.137 2.3 2.068 3.487 2.806.415.258.798.473 1.141.646l.166.083.055-.028c3.148-1.685 5.463-3.988 7.061-6.765l.153-.27c1.103-1.995 1.795-4.134 2.152-6.3.206-1.248.279-2.347.27-3.22v-.013l-.067-.003c-.323-.021-.653-.058-.99-.109l-.338-.056c-1.7-.307-3.501-.966-5.327-1.873-.897-.446-1.743-.923-2.512-1.4l-.31-.196-.291-.189zm5.7 6.218c.213.212.23.547.05.778l-.05.056-6.76 6.761-3.388-3.271c-.235-.226-.241-.6-.015-.834.209-.216.543-.238.777-.063l.057.048 2.554 2.466 5.942-5.941c.23-.23.604-.23.834 0z"/>
+</g>
+</svg>
+<a href="javascript:;" data-xtclick='{"label":"detailPA::covid19::Dispositif", "typeClick":"action"}'>
+<span class="cbm--hiddenPhone">Découvrez notre dispositif spécial Covid-19</span>
+<span class="cbm--onlyPhone">Dispositif spécial Covid-19</span>
+</a>
+</div>
+<div class="buttons-container">
+<button class="cbm-btn--1 cbm-btn__sellerLoc" data-classified-id="87101918863" data-customer-reference="C041274" data-customer-published-name="AVO SPORT" data-vertical="auto" data-xtclick='{"label":"Conversion_niveau_1::Plan", "typeClick":"action"}' data-first-xtclick='{"label":"Conversion_1er_clic::Plan", "typeClick":"action"}' data-tc-event="contact" data-tc-event-data='{"click_name":"locate","label":"Conversion_niveau_1::Plan","click_type":"A"}'>
+Localiser
+</button>
+<button class="cbm-btn--1 cbm-btn__sellerContact" data-classified-id="87101918863" data-customer-reference="C041274" data-customer-published-name="AVO SPORT" data-vertical="auto" data-xtclick='{"label":"Conversion_niveau_1::Contact", "typeClick":"action"}' data-first-xtclick='{"label":"Conversion_1er_clic::Contact", "typeClick":"action"}' data-tc-event="contact" data-tc-event-data='{"click_name":"contact","label":"Conversion_niveau_1::Contact","click_type":"A"}'>
+Contacter le vendeur
+</button>
+</div>
+<script data-pipe>Pipe.end(9, "https://www.lacentrale.fr/static/fragment-contact/seller-contact-eaa24a2f.js", {"primary":false,"id":9,"range":[9,9]})</script>
+</div>
+</div>
+<div data-pub-appnexus="Pave1" class="cbm-appnexus__cobble"></div>
+</div>
+</div>
+<div class="cbm-mainColumn">
+<script data-pipe>Pipe.start(10, "https://www.lacentrale.fr/static/fragment-contact/carousel-eaa24a2f.js", {"primary":false,"id":10,"range":[10,10]})</script><div id="cbm-carousel" data-vertical="auto"><p style="display: none;">{"filters":{"all":"Toutes les photos","outside":"Extérieur","inside":"Intérieur","seats":"Sièges","trunk":"Coffre","dashboard":"Tableau de bord","wheels":"Roues","other":"Autres"},"slides":[{"id":"a66e486f783805853a9c2474e7695a8d","score":100,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_0.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_0.jpg?version=1607743534"},{"id":"dc59c17e2bb5c0f4e12f10bd6d89a914","score":100,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_1.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_1.jpg?version=1607743534"},{"id":"2533c28c4161c75f41e469e9a1c1f948","score":100,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_2.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_2.jpg?version=1607743534"},{"id":"901658c20803e9577ca8c3e6d1e6a582","score":100,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_3.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_3.jpg?version=1607743534"},{"id":"48d1f95abd38c11bbe3857a65180ee5c","score":100,"type":"image","filters":["all","seats","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_4.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_4.jpg?version=1607743534"},{"id":"d35634a2bc21591facb4c0e04c9de6c1","score":93,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_5.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_5.jpg?version=1607743534"},{"id":"90bfc9cffc639ceca80fb5d3a5bad2b6","score":100,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_6.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_6.jpg?version=1607743534"},{"id":"9022817c01166de91c05e66aedd0bde9","score":71,"type":"image","filters":["all","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_7.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_7.jpg?version=1607743534"},{"id":"1d19158d8c8383c2c336aa05e0a7b4d7","score":98,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_8.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_8.jpg?version=1607743534"},{"id":"c0eb6a3ade55362eb817fbddc4b2a010","score":71,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_9.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_9.jpg?version=1607743534"},{"id":"880c333475cf80714cd15d730f6e7a23","score":99,"type":"image","filters":["all","trunk","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_11.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_11.jpg?version=1607743534"},{"id":"1a4ee28ae20161035ae6fddbfd0eb7f7","score":100,"type":"image","filters":["all","wheels","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_13.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_13.jpg?version=1607743534"},{"id":"13466431c2b6b396559ec8e6a2d5a502","score":100,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_14.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_14.jpg?version=1607743534"},{"id":"c3eaf7ad0cf686b85c73b5f9bf38fae1","score":100,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_15.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_15.jpg?version=1607743534"},{"id":"16d3aceb37d42404ffd2e689442e55fe","score":98,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_16.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_16.jpg?version=1607743534"},{"id":"eb69daad42c202bf4deb337c1f9f47c5","score":97,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_17.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_17.jpg?version=1607743534"},{"id":"10ea63b9b1abd83ad2ee0483673086bf","score":98,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_18.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_18.jpg?version=1607743534"},{"id":"99a9c6ed2e9a2e5fbf3bad64cb6db9fb","score":100,"type":"image","filters":["all","seats","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_19.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_19.jpg?version=1607743534"},{"id":"895f800f2b058c65597b629f9b86a594","score":100,"type":"image","filters":["all","seats","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_20.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_20.jpg?version=1607743534"},{"id":"f79e5d9e8c112b08f8fa3818152c8491","score":86,"type":"image","filters":["all","seats","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_21.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_21.jpg?version=1607743534"},{"id":"b72a34ec757a2759ca7587b14f5f0522","score":91,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_23.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_23.jpg?version=1607743534"},{"id":"0302e7cdf49a959522d0fd5acb162eab","score":86,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_24.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_24.jpg?version=1607743534"},{"id":"ddc8f2fc5e1a8e61f384a1619e892751","score":82,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_25.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_25.jpg?version=1607743534"},{"id":"24498013fc484ea9d8630d9f2c978328","score":64,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_26.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_26.jpg?version=1607743534"},{"id":"908048f3cc4db095245470ead5ac59a6","score":63,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_27.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_27.jpg?version=1607743534"},{"id":"eb71b16e85b23352b905b59456affa2d","score":52,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_28.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_28.jpg?version=1607743534"},{"id":"6f2a8a1af3ed7d8f494acbe64bde365d","score":91,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_29.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_29.jpg?version=1607743534"},{"id":"1c342b66241f5b2ac5e078356be094db","score":69,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_30.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_30.jpg?version=1607743534"},{"id":"5537a93f91493114399d955254376988","score":55,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_31.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_31.jpg?version=1607743534"},{"id":"134548daa8e0ed7e482e081639372f59","score":44,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_32.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_32.jpg?version=1607743534"},{"id":"be86b3b34c0610d558b182aa5afa909c","score":43,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_33.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_33.jpg?version=1607743534"},{"id":"51d3983daf21bdd1ceea97fd5589da7e","score":43,"type":"image","filters":["all","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_34.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_34.jpg?version=1607743534"},{"id":"2e87172e5d7bd782c5bb164129bf0858","score":98,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_35.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_35.jpg?version=1607743534"},{"id":"7d397b1e572e48c2f515e3dfe1f7a41b","score":68,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_37.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_37.jpg?version=1607743534"},{"id":"053f119392df881cdf2174c4e5d44167","score":55,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_38.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_38.jpg?version=1607743534"},{"id":"8c02d09e62bf84f63bf773e8f3ce1670","score":40,"type":"image","filters":["all","dashboard","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_39.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_39.jpg?version=1607743534"},{"id":"f391c8aaf356124f4cd9a791088c1363","score":97,"type":"image","filters":["all","trunk","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_40.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_40.jpg?version=1607743534"},{"id":"02b3df3fcd3fb39404f7ef8e7271c4d2","score":90,"type":"image","filters":["all","trunk","inside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_41.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_41.jpg?version=1607743534"},{"id":"9c09b39d4f4daaf177c9d1587d9f4bec","score":100,"type":"image","filters":["all","wheels","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_43.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_43.jpg?version=1607743534"},{"id":"f4cd737e46a3afb4f2b02e16f1b29352","score":100,"type":"image","filters":["all","wheels","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_44.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_44.jpg?version=1607743534"},{"id":"ad0eac0a1ee5a100c0240210a1775330","score":97,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_45.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_45.jpg?version=1607743534"},{"id":"32ec82e752f943989204c98a5114214d","score":83,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_46.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_46.jpg?version=1607743534"},{"id":"f5bb597ec66b505fea983bf06aa1246c","score":64,"type":"image","filters":["all","outside"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_47.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_47.jpg?version=1607743534"},{"id":"9183eeecb66bd76b8026885bb44c996b","score":95,"type":"image","filters":["all","other"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_48.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_48.jpg?version=1607743534"},{"id":"63787ce22d94d046fbb1c040073c9726","score":59,"type":"image","filters":["all","other"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_49.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_49.jpg?version=1607743534"},{"id":"f21bb062e66b5311e989896f7bc9da14","score":35,"type":"image","filters":["all","other"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_10.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_10.jpg?version=1607743534"},{"id":"edba4a80bece6cb11fcf0da2e9c62db4","score":30,"type":"image","filters":["all","other"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_12.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_12.jpg?version=1607743534"},{"id":"bdb7f1f3aae7e6db25214592d85bf42b","score":37,"type":"image","filters":["all","other"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_22.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_22.jpg?version=1607743534"},{"id":"c21696ac219047c98e12e3bcbbea9172","score":37,"type":"image","filters":["all","other"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_36.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_36.jpg?version=1607743534"},{"id":"caf3eccf3b64ca3b35b08ea1c0d9593d","score":24,"type":"image","filters":["all","other"],"src":"https://image.lacentrale.fr/852x640/W101918863_STANDARD_42.jpg?version=1607743534","thumbnail":"https://image.lacentrale.fr/92x69/W101918863_STANDARD_42.jpg?version=1607743534"},{"type":"image","filters":["all"],"src":"https://vitrines-pdv-resize.carboatservices.fr/744x560/C041274/pdv1.jpg","thumbnail":"https://vitrines-pdv-resize.carboatservices.fr/280x250/C041274/pdv1.jpg","overlay":{"linkLabel":"Découvrir le point de vente","url":"https://pros.lacentrale.fr/C041274/","label":"AVO SPORT"}}],"isPro":{"schedules":null,"logo_url":"https://photo-vitrines.lacentrale.fr/images/logo/C0/41/27/logo_C041274_61050.gif","customer_ref":"C041274","city":"NOGENT LE PHAYE","zip_code":"28630","main_picture_path":"https://vitrines-pdv-resize.carboatservices.fr/C041274/pdv1.jpg","main_picture_path_280x250":"https://vitrines-pdv-resize.carboatservices.fr/280x250/C041274/pdv1.jpg","main_picture_path_744x560":"https://vitrines-pdv-resize.carboatservices.fr/744x560/C041274/pdv1.jpg","level":2,"dealer_type":"auto","has_active_promotions":false,"company_page_url":"https://pros.lacentrale.fr/C041274/","dealer_custom_url":"https://pros.lacentrale.fr/C041274","has_active_services":false,"has_news":false,"has_active_company_desc":false,"classified_slideshow_active":false},"reference":"W101918863"}</p></div><script data-pipe>Pipe.end(10, "https://www.lacentrale.fr/static/fragment-contact/carousel-eaa24a2f.js", {"primary":false,"id":10,"range":[10,10]})</script>
+<script data-pipe>Pipe.start(11)</script><script data-pipe>Pipe.end(11)</script>
+<script data-pipe>Pipe.start(12, "https://www.lacentrale.fr/static/fragment-classified/general-informations-6c026f03.js", {"primary":false,"id":12,"range":[12,12]})</script><div id=generalInformationWrapper><section id="generalInformation" class="cbm-moduleInfos visibility-sensor" data-id="generalInformation" data-reactroot=""><div class="headerSection headerSection-underline"><h2 class="titleSection">Informations générales</h2><span class="headerSection-extraContent">Réf. pro : 20762 | Réf. annonce : W101918863</span></div><h1 class="cbm-moduleInfos__informationListFirst">BMW SERIE 1 (F20) (2) 116I M SPORT</h1><div class="cbm-moduleInfos__informationList cbm-moduleInfos__information_column_break"><ul><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Année</button> : </span><span>2019</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Mise en circulation</button> : </span><span>19/04/2019</span></li><li class="cbm-moduleInfos__helpLink"><span class="optionLabel"><button class="cbm-helpLinkTxt">Contrôle technique</button><button type="button" class="cbm-helpLink">?</button> : </span><span>non requis</span></li><li class="cbm-moduleInfos__helpLink"><span class="optionLabel"><button class="cbm-helpLinkTxt">Kilométrage compteur</button><button type="button" class="cbm-helpLink">?</button> : </span><span>17 800 Km<span class="cbm-badge--mileage"><span height="25" class="icon-wrapper"><span class="icon"><svg width="25" height="25" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#000" d="M11.762 3c5.935 0 10.762 4.827 10.762 10.762 0 2.35-.777 4.648-2.196 6.513l-.218.276-.106.13-.155.072H3.674l-.155-.074-.105-.128A10.78 10.78 0 011 13.76C1 7.828 5.828 3 11.762 3zm0 1.103c-5.327 0-9.66 4.333-9.66 9.659a9.68 9.68 0 001.849 5.679l.158.209h15.305l.159-.21a9.678 9.678 0 001.842-5.319l.007-.36c0-5.325-4.334-9.658-9.66-9.658z"></path><path fill="#4FC459" d="M16.53 16.635c.11 0 .2.09.2.2v2.07a.2.2 0 01-.2.2H6.994a.2.2 0 01-.2-.2v-2.07c0-.11.09-.2.2-.2zM4.92 8.993l.054.016 6.125 2.79a2.09 2.09 0 011.942.129 2.098 2.098 0 01-2.188 3.579 2.081 2.081 0 01-1-1.683L4.61 9.602a.192.192 0 01-.043-.249l.167-.27a.188.188 0 01.24-.074zm7.069 3.996a.774.774 0 10.001 1.548.774.774 0 00-.001-1.548z"></path></g></svg></span></span></span></span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Énergie</button> : </span><span>Essence</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Boîte de vitesse</button> : </span><span>mécanique</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Couleur extérieure</button> : </span><span>blanc metal</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Couleur intérieure</button> : </span><span>tissu gris</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Nombre de portes</button> : </span><span>5</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Nombre de places</button> : </span><span>5</span></li></ul><ul><li class="cbm-txt--warranty"><span class="optionLabel"><button class="cbm-helpLinkTxt">Garantie</button> : </span><span>12 mois</span></li><li class="cbm-moduleInfos__helpLink"><span class="optionLabel"><button class="cbm-helpLinkTxt">Garantie constructeur</button><button type="button" class="cbm-helpLink">?</button> : </span><span>en cours</span></li><li class="cbm-moduleInfos__helpLink"><span class="optionLabel"><button class="cbm-helpLinkTxt">Première main (déclaratif)</button><button type="button" class="cbm-helpLink">?</button> : </span><span>oui</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Puissance fiscale</button> : </span><span>6 CV</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Puissance din</button> : </span><span>109 ch</span></li><li class=""><span class="optionLabel"><button class="cbm-helpLinkTxt">Puissance moteur</button> : </span><span>80 kW</span></li><li class="cbm-moduleInfos__helpLink"><span class="optionLabel"><button class="cbm-helpLinkTxt">Crit&#x27;Air</button><button type="button" class="cbm-helpLink">?</button> : </span><span>1<span class="cbm__badgeWrapper cbm__smallBadges"><span class="cbm__ImgCritair--1"></span></span></span></li><li class="cbm-moduleInfos__helpLink"><span class="optionLabel"><button class="cbm-helpLinkTxt">Émissions de CO2</button><button type="button" class="cbm-helpLink">?</button> : </span><span>126 g/km<span class="cbm__badgeWrapper cbm__smallBadges"><span class="cbm__bilan--co2 cbm__co2--C">C</span></span></span></li><li class="cbm-moduleInfos__helpLink"><span class="optionLabel"><button class="cbm-helpLinkTxt">Consommation mixte</button><button type="button" class="cbm-helpLink">?</button> : </span><span>5.4 l/100km</span></li><li class="cbm-moduleInfos__helpLink"><span class="optionLabel"><button class="cbm-helpLinkTxt">Norme Euro</button><button type="button" class="cbm-helpLink">?</button> : </span><span>EURO6</span></li></ul></div><div class="cbm-moduleInfos__wrapper cbm-gridLiner cbm--hiddenPrint"><a class="link button-theme4" href="#equipements"><span>54 équipements &amp; options</span></a><a class="link button-theme2" href="https://www.lacentrale.fr/fiche_cote_auto_flat.php?source=detail&amp;marque=bmw&amp;modele=serie%2B1&amp;version=(f20)%2B(2)%2B116i%2Bm%2Bsport&amp;type=perso&amp;millesime=2019&amp;km=17800&amp;price=20900&amp;zipcode=28630&amp;ref=87101918863&amp;fh=true&amp;fdt=2019-04-19&amp;last-update=2020-12-12T03%3A25%3A34.857Z"><span class="icon-wrapper"><span class="icon icon-color--6"><svg width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#333" fill-rule="nonzero" d="M13.818.5l9.03 1.305v9.586L10.978 23.5 1.151 13.357 13.818.5zm.417 1.237L2.78 13.363l8.202 8.468 10.7-10.916V2.813l-7.447-1.076zm2.875 7.885c.38.419.643.835.798 1.153l.048.101-1.064.474-.032-.065a4.179 4.179 0 00-.611-.878c-.908-.998-2.013-1.274-3.471-.414l2.637 2.566-.812.834-2.785-2.71-.127.108c-.103.09-.2.18-.291.27l2.812 2.734-.812.835-2.743-2.668c-.52.831-.564 1.627-.229 2.37.368.814 1.238 1.498 1.71 1.553l.064.004.017 1.164c-.958.013-2.29-.996-2.853-2.242-.53-1.178-.405-2.446.446-3.673l-.74-.719.813-.834.682.663c.129-.128.266-.255.412-.38l-.703-.685.812-.835.832.81c2.08-1.345 3.864-.991 5.19.464zm2.057-6.515a2.016 2.016 0 110 4.031 2.016 2.016 0 010-4.031zm0 1.164a.852.852 0 100 1.701.852.852 0 000-1.7z"></path></g></svg></span></span><span class="link-iconText">Cote de ce véhicule</span></a></div></section></div>
+<script>
+    (function(key, value) {
+      (window.CBM || (window.CBM = {})) && (window.CBM[key] = value);
+    })("GENERAL_INFORMATION_PROPS", {"classified":{"vehicle":{"make":"BMW","model":"SERIE 1","version":"(F20) (2) 116I M SPORT","year":"2019","mileage":17800,"firstHand":true,"firstCirculationDate":"2019-04-19","averageMileage":22353,"category":"COMPACTE","co2":126,"origin":"FRENCH","conversionBonusEligibility":false,"energy":"ESSENCE","critAir":1,"seats":5,"pollutionNorm":"EURO6","externalColor":"blanc metal","internalColor":"tissu gris","doors":5,"ratedHorsePower":6,"powerDIN":109,"standardComputed":"NEDC","computedCo2":{"reliable":true,"combined":126,"ecoBonusMalus":0},"computedConsumption":{"reliable":true,"consumptionCity":6.8,"consumption90":4.6,"consumption120":5.4},"maxPower":80},"price":20900,"zipCode":"28630","lastUpdate":"2020-12-12T03:25:34.857Z","autoviza":{"display":false,"disabled":false},"mileageBadge":"UNDER_MILEAGE","customerType":"PRO","reference":"W101918863","referencePro":"20762","constructorWarranty":{"mileage":999999,"endDate":"2021-04-18"},"networkWarranty":{"duration":12,"designation":{}}},"equipmentsOrOptionsCount":54,"classifiedId":"87101918863","vertical":"auto","mappedData":{"vehicleFirstCirculationDate":"19/04/2019","vehicleEnergy":"Essence","constructorWarrantyEndDate":"18/04/2021","vehicleGearbox":"mécanique"}})
+  </script>
+<script data-pipe>Pipe.end(12, "https://www.lacentrale.fr/static/fragment-classified/general-informations-6c026f03.js", {"primary":false,"id":12,"range":[12,12]})</script>
+<section class="cbm-moduleSeller">
+<script data-pipe>Pipe.start(13, "https://pro-services-layout.carboatservices.fr/bundle.js", {"primary":false,"id":13,"range":[13,13]})</script><div class="cbm-moduleSeller visibility-sensor" data-id="seller-informations">
+<div class="cbm-seller__pro">
+<h2 class="cbm-title--section">
+Vendeur professionnel
+</h2>
+<div class="cbm-sellerWrapper">
+<div class="cbm-sellerImg">
+<a target="_blank" href="https://pros.lacentrale.fr/C041274/" data-xtclick='{"label":"vitrine::marque", "typeClick":"navigation", "autoPrefix" : "true"}'>
+<img src="https://pros.lacentrale.fr/ws/logo/C041274" width="99" height="99" alt="" title="Consulter tous les v&eacute;hicules d'occasion de ce pro" rel="nofollow"/>
+</a>
+</div>
+<div class="cbm-sellerName">
+<a target="_blank" href="https://pros.lacentrale.fr/C041274/" data-xtclick='{"label":"vitrine::titre", "typeClick":"navigation", "autoPrefix" : "true"}'>
+<h3 class="cbm-sellerName__Name">AVO SPORT</h3>
+</a>
+</div>
+<ul class="cbm-sellerInfos cbm-list--2">
+<li>
+<span>Type de vendeur
+<a href="javascript:;" class="cbm-helpLink cbm-sellerInfosHelpLink" data-xtclick='{"label":"::typeVendeur", "typeClick":"navigation", "autoPrefix" : "true"}'>
+?
+<div class="popinSellerType">
+<span class="triangle triangleT mT-5"></span>
+Les centres multimarques (ou négociants automobiles) sont spécialisés dans l&#39;achat et revente de véhicules d&#39;occasion, c&#39;est leur métier principal. Ils regroupent les spécialistes du véhicule d&#39;occasion, les marchands...
+</div>
+</a>
+:&nbsp;</span>
+<span>
+Centre multimarques
+</span>
+</li>
+<li>
+<span>Ann&eacute;e de cr&eacute;ation :&nbsp;</span>
+<span>2014</span>
+</li>
+<li>
+<span>Vendeur La Centrale depuis :&nbsp;</span>
+<span>2016</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script data-pipe>Pipe.end(13, "https://pro-services-layout.carboatservices.fr/bundle.js", {"primary":false,"id":13,"range":[13,13]})</script>
+<script data-pipe>Pipe.start(14)</script>
+<div class="b2b-popinContainer">
+<div class="b2b-popin">
+<div class="b2b-popin-header">
+<h2>Dispositif spécial Covid-19</h2>
+<span class="b2b-popin-span" onclick="b2b.hideCovid19Popin();">X</span>
+</div>
+<div class="b2b-popin-body">
+<div id="b2b-covid19Proceedings">
+<p><span class='b2b-bold'> Point de vente aménagé : </span> Le vendeur applique au minimum les mesures sanitaires suivantes : distanciation des personnes sur le point de vente et port d’un masque par le vendeur. Certains vendeurs porteront des gants. </p>
+<p><span class='b2b-bold'> Protections pour les clients : </span> Le vendeur met à disposition de ses clients au minimum du gel hydroalcoolique. Certains vendeurs proposent également des gants. </p>
+<p><span class='b2b-bold'> Désinfection du véhicule : </span> Le vendeur désinfecte les zones les plus exposées du véhicule (poignées, clés, volant, levier de vitesse, frein main) entre chaque client. </p>
+<p><span class='b2b-bold'> Livraison à domicile : </span> Le vendeur livre le véhicule directement à domicile dans un rayon de 25 km autour du point de vente. </p>
+<p><span class='b2b-bold'> Essai à domicile : </span> Le vendeur se déplace avec le véhicule à domicile pour faire un essai (dans un rayon de 25 km autour du point de vente). </p>
+<p>
+<img class="b2b-blockWarnAnnexImage" src="https://pros.lacentrale.fr/assets/pictos/img-info-popover.svg"/>
+<span class="b2b-blockWarnAnnexMessage">Toutes ces mesures sont sous l'unique responsabilité du vendeur.</span>
+</p>
+</div>
+<span class='b2b-bold'> Le mot du vendeur : </span>
+<div>
+<b><u>Point de vente aménagé Covid-19</u></b> : distanciation
+des personnes sur le point de vente <u>et</u> protection du personnel
+<br><b><u>Protections
+pour les clients</u></b> : mise
+à disposition des clients au minimum du gel hydroalcoolique
+<br><b><u>Désinfection
+du véhicule</u></b> : désinfection
+des zones au minimum des plus exposées du véhicule (poignées, clés, volant,
+levier de vitesse, frein à main) entre chaque client
+<br><i><b><u>Livraison
+à domicile : livraison
+du véhicule directement au domicile de l’acheteur dans un rayon de 500 km autour
+de votre point de vente
+</u></b></i><br><b><u>Essai
+du véhicule à domicile</u></b> : déplacement
+à domicile pour faire un essai (dans un rayon de 25 km autour du PDV)
+</div>
+</div>
+</div>
+</div>
+<div class="b2b-covid19MeasuresContainer">
+<h1 class="b2b-showMobileTitle">Dispositif Covid-19 de ce vendeur</h1>
+<h1 class="b2b-showDesktopTitle">Le dispositif Covid-19 de ce vendeur</h1>
+<div class="b2b-desktopMesuresItems">
+<div class="b2b-desktopMesureItem">
+<span class="b2b-measureLi"></span>
+<span class="b2b-measureLabel">Point de vente aménagé</span>
+</div>
+<div class="b2b-desktopMesureItem">
+<span class="b2b-measureLi"></span>
+<span class="b2b-measureLabel">Protections pour les clients</span>
+</div>
+<div class="b2b-desktopMesureItem">
+<span class="b2b-measureLi"></span>
+<span class="b2b-measureLabel">Désinfection du véhicule</span>
+</div>
+<div class="b2b-desktopMesureItem">
+<span class="b2b-measureLi"></span>
+<span class="b2b-measureLabel">Livraison à domicile</span>
+</div>
+<div class="b2b-desktopMesureItem">
+<span class="b2b-measureLi"></span>
+<span class="b2b-measureLabel">Essai à domicile</span>
+</div>
+</div>
+</div>
+<div class="b2b-covidBanner b2bContainerSite" onclick="b2b.showCovid19Popin();" data-xtclick='{"label":"covid19::PlusInfos", "typeClick":"action", "autoPrefix":"true" }'>
+<div class="b2b-covidBanner-bouclier"><img src="https://pros.lacentrale.fr/assets/pictos/picto-bouclier.svg"/></div>
+<h1 class="b2b-covidBanner-h1 b2b-showMobileTitle">Plus d'infos sur notre dispositif Covid-19</h1>
+<h1 class="b2b-covidBanner-h1 b2b-showDesktopTitle">Plus d'information sur notre dispositif spécial Covid-19</h1>
+</div>
+<style>
+.b2b-covidBanner {
+    background-color : #E47300;
+    color : #fff;
+    padding : 0.5rem 0;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    margin : 0 auto 0.5rem;
+    cursor : pointer;
+}
+
+.b2b-bold {
+    font-weight: bold;
+}
+
+.b2b-covidBanner-h1 {
+    text-decoration : underline;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.b2b-covidBanner-bouclier {
+    margin-right : 8px;
+}
+
+.b2b-covidBanner-bouclier img {
+    display: block;
+    width: 22px;
+    height: 23px;
+}
+
+.b2b-popinContainer {
+    display : none;
+    z-index : 9999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    box-shadow: 3px 3px 10px 5px #656565;
+}
+
+    .b2b-popin {
+        width:50%;
+        color: #000;
+        background-color: #fff;
+        padding : 1.5rem 1rem;
+        border-radius : 10px;
+        position: relative;
+        top: 10%;
+        margin-bottom: 30px;
+    }
+
+.b2b-popin-header {
+    display : flex;
+    justify-content : space-between;
+    border-bottom : 2px solid #E2E2E2;
+}
+
+.b2b-popin-header h2 {
+    font-size : 20px;
+}
+
+    .b2b-popin-span {
+        background-color : #E2E2E2;
+        padding : 0.5rem 0.8rem;
+        margin : -0.5rem 0 1rem;
+        cursor : pointer;
+        border-radius : 5px;
+        font-weight : bold;
+        font-size : 18px;
+    }
+
+    .b2b-popin-body {
+        padding-top : 1.5rem;
+        font-size : 15px;
+    }
+
+.b2b-showMobileTitle {
+    display : none;
+}
+
+.b2b-measureLabel {
+    font-size: 15px;
+}
+
+.b2b-desktopMesuresItems {
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.b2b-measureLi::before {
+    content: "\2022";
+    color: #E47300;
+    font-size: 23px;
+    line-height: normal;
+}
+
+.b2b-desktopMesuresItems .b2b-desktopMesureItem {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0px 24px;
+    line-height: 1.47;
+}
+
+.b2b-covid19MeasuresContainer {
+    border: solid 2px #e47300;
+}
+
+.b2b-covid19MeasuresContainer h1 {
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 0 0 5px 24px;
+    font-weight: 700;
+}
+
+.b2b-blockWarnAnnexMessage {
+    margin-left: 30px;
+}
+
+.b2b-blockWarnAnnexImage {
+    position: absolute;
+    margin-top: -2px;
+}
+
+@media (max-width: 1200px) {
+    .b2b-popin {
+        width: 80%;
+    }
+}
+
+    @media (max-width: 766px) {
+        .b2b-showDesktopTitle {
+            display : none;
+        }
+        .b2b-showMobileTitle {
+            display : block;
+        }
+        .b2b-popin-body {
+            font-size : 17px;
+        }
+
+        .b2b-covid19MeasuresContainer h1 {
+            font-size: 22px;
+            padding: 0 0 5px 8px;
+            font-weight: 700;
+        }
+        .b2b-measureLabel {
+            font-size: 17px;
+        }
+        .b2b-desktopMesuresItems .b2b-desktopMesureItem {
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0px 8px;
+        }
+
+        .b2b-popin {
+            margin-top: 25px;
+        }
+
+
+        .responsive.front h1.b2b-covidBanner-h1,
+        .b2b-covidBanner-h1 {
+            font-size: 17px !important;
+        }
+}
+
+#b2b-covid19Proceedings {
+    padding-bottom: 15px;
+}
+
+</style>
+<script>
+    window.b2b = window.b2b || {};
+
+    (function(b2b){
+        var popinContainer = document.querySelector(".b2b-popinContainer");
+        b2b.showCovid19Popin = function() {
+            popinContainer.style.display = "flex";
+        };
+
+        b2b.hideCovid19Popin = function() {
+            popinContainer.style.display = "none";
+        };
+    })(window.b2b);
+</script>
+<div class="cbm-outlet">
+<a href="https://pros.lacentrale.fr/C041274/" target="_blank" class="cbm-outlet__Img" data-xtclick='{"label":"vitrine::photos", "typeClick":"navigation", "autoPrefix":"true"}'>
+<img src="https://vitrines-pdv-resize.carboatservices.fr/280x250/C041274/pdv1.jpg" width="100%" class="cbm-concessLogo" border="0" onerror="this.src = 'https://static.lacentrale.fr/images/lc_fr/Pros/showroom_auto_placeholder.jpg';"/>
+</a>
+<div class="cbm-outlet__information--title">
+Notre point de vente à NOGENT LE PHAYE (28)
+</div>
+<div class="cbm-outlet__information__btnWrapper">
+<a class="cbm-btn--2" data-xtclick='{"label":"vitrine::xautos", "typeClick":"navigation", "autoPrefix":"true"}' href="https://pros.lacentrale.fr/C041274/cat-AUTO/" target="_blank" title="Nos 18 autos">
+<span class="cbm-picto--catAutoWhite cbm--hiddenPhone"></span>
+<span>Nos 18 autos</span>
+</a>
+</div>
+<div class="cbm-outlet__information__btnWrapper cbm-outlet__information__pages">
+</div>
+</div>
+<script data-pipe>Pipe.end(14)</script>
+</section>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-contact/option-equipments-eaa24a2f.css"><script data-pipe>Pipe.start(15, "https://www.lacentrale.fr/static/fragment-contact/option-equipments-eaa24a2f.js", {"primary":false,"id":15,"range":[15,15]})</script><section class="cbm-moduleEquip" data-reactroot=""><div class="cbm-anchor"><a name="equipements" id="equipements" class="cbm-anchor--point"></a></div><div class="headerSection headerSection-underline"><h2 class="titleSection">54 équipements &amp; options</h2></div><article class="visibility-sensor" data-id="optionEquipments"><div class="listWrapper"><div class="list-title">extérieur et châssis</div><ul class="list list--bulleted list--dense"><li class="list-item"><span>Ampoules de phares LED</span></li><li class="list-item"><span>Antibrouillards avant</span></li><li class="list-item"><span>Phares à allumage automatique</span></li><li class="list-item"><span>Freins régénérateurs</span></li><li class="list-item"><span>Feux arrières à LED</span></li><li class="list-item"><span>Rétroviseurs extérieurs réglage électrique</span></li><li class="list-item"><span>Rétroviseurs extérieurs chauffants</span></li></ul></div><div class="listWrapper"><div class="list-title">intérieur</div><ul class="list list--bulleted list--dense"><li class="list-item"><span>Bluetooth inclut musique en streaming, connexion téléphone</span></li><li class="list-item"><span>Air conditionné auto</span></li><li class="list-item"><span>Volant multi-fonction</span></li><li class="list-item"><span>Système de navigation info trafic</span></li><li class="list-item"><span>Bouton démarrage</span></li><li class="list-item"><span>Système de navigation</span></li><li class="list-item"><span>Régulateur de vitesse</span></li><li class="list-item"><span>Réglage du volant en hauteur, en profondeur</span></li><li class="list-item"><span>Système audio CD</span></li><li class="list-item"><span>Bluetooth</span></li><li class="list-item"><span>Volant alu &amp; cuir</span></li><li class="list-item"><span>Reconnaissance vocale</span></li><li class="list-item"><span>Ouverture du coffre à distance</span></li><li class="list-item"><span>Smart card / Smart key</span></li><li class="list-item"><span>6 haut-parleurs</span></li><li class="list-item"><span>Tapis de sol</span></li><li class="list-item"><span>Rétroviseur jour/nuit</span></li><li class="list-item"><span>Limiteur de vitesse</span></li><li class="list-item"><span>Taille écran multi-fonctions 6.5 pouces</span></li><li class="list-item"><span>Taille écran navigation 6.5 pouces</span></li><li class="list-item"><span>Accoudoir central avant</span></li><li class="list-item"><span>Ordinateur de bord</span></li></ul></div><div class="listWrapper"><div class="list-title">sécurité</div><ul class="list list--bulleted list--dense"><li class="list-item"><span>Airbags latéraux</span></li><li class="list-item"><span>Aide au démarrage en côte</span></li><li class="list-item"><span>Assistance au freinage d&#x27;urgence</span></li><li class="list-item"><span>Antipatinage</span></li><li class="list-item"><span>Pneus roulage à plat</span></li><li class="list-item"><span>ESP</span></li><li class="list-item"><span>6 airbags</span></li><li class="list-item"><span>Contrôle de freinage en courbe</span></li><li class="list-item"><span>Essuie glace capteur de pluie</span></li><li class="list-item"><span>Airbags rideaux</span></li><li class="list-item"><span>Indicateur de sous-gonflage des pneus</span></li><li class="list-item"><span>ABS</span></li></ul></div><div class="listWrapper"><div class="list-title">autre</div><ul class="list list--bulleted list--dense"><li class="list-item"><span>Finition M Sport avec Pack M Sport Shadow</span></li><li class="list-item"><span>Feux de route à LED</span></li><li class="list-item"><span>Crochet d&#x27;attelage avec rotule amovible</span></li><li class="list-item"><span>non fumeur</span></li><li class="list-item"><span>Sièges avant avec soutien lombaire</span></li><li class="list-item"><span>Vitrage calorifuge arrière</span></li><li class="list-item"><span>Sièges avant chauffants</span></li><li class="list-item"><span>Volant sport</span></li><li class="list-item"><span>carnet d&#x27;entretien</span></li><li class="list-item"><span>Banquette arrière rabattable avec accoudoir central arrière</span></li><li class="list-item"><span>Caméra de recul</span></li><li class="list-item"><span>Climatisation automatique bi-zone</span></li><li class="list-item"><span>Filet de séparation du coffre</span></li></ul></div></article></section><script data-pipe>Pipe.end(15, "https://www.lacentrale.fr/static/fragment-contact/option-equipments-eaa24a2f.js", {"primary":false,"id":15,"range":[15,15]})</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-contact/maintenance-repairs-eaa24a2f.css"><script data-pipe>Pipe.start(16, "https://www.lacentrale.fr/static/fragment-contact/maintenance-repairs-eaa24a2f.js", {"primary":false,"id":16,"range":[16,16]})</script><section class="cbm-moduleMaintenance visibility-sensor" data-id="technicalInformation" data-reactroot=""><div class="headerSection headerSection-underline"><h2 class="titleSection">Entretien &amp; informations techniques</h2></div><div><div class="cbm-moduleInfos__volumes"><div><div class="listWrapper"><div class="list-title"><h3>Informations techniques <sup class="cbm-asterisk">(1)</sup></h3></div><ul class="list list--bulleted list--dense"><li class="list-item"><span>Longueur : 4.33 m</span></li><li class="list-item"><span>Volume du coffre : 360 L</span></li></ul></div><div class="cbm-moduleInfos__volume"><div class="cbm-moduleInfos__volume--axis"><span class="cbm-moduleInfos__volume--pin cbm--chart-pin" style="left:47%"></span> </div><div class="cbm-moduleInfos__volume--legend"><span class="cbm-moduleInfos__volume--start">190 L</span><span class="cbm-moduleInfos__volume--end">550 L</span></div></div></div></div><div><span class="cbm-asterisk">1. Sources : données carte grise et constructeur</span></div></div><article><a class="link button-theme2" id="technical_sheet_link" href="https://www.lacentrale.fr/fiche-technique-voiture-bmw-serie+1-(f20)+(2)+116i+m+sport-2019.html" data-xtclick="{&quot;label&quot;:&quot;fiche_technique&quot;,&quot;typeClick&quot;:&quot;navigation&quot;,&quot;autoPrefix&quot;:&quot;true&quot;}"><span>Consulter la fiche technique</span></a></article></section><script data-pipe>Pipe.end(16, "https://www.lacentrale.fr/static/fragment-contact/maintenance-repairs-eaa24a2f.js", {"primary":false,"id":16,"range":[16,16]})</script>
+<script data-pipe>Pipe.start(17)</script><script data-pipe>Pipe.end(17)</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-caution/caution-a6d91f19.css"><script data-pipe>Pipe.start(18, "https://www.lacentrale.fr/static/fragment-caution/caution-a6d91f19.js", {"primary":false,"id":18,"range":[18,18]})</script>
+<div id="cautionRoot">
+<div class="cbm-moduleCaution caution" data-reactroot=""><button class="button button-theme4" type="button"><span>Signaler une annonce</span></button><a class="link button-theme4" href="/conseils/"><span>Nos conseils pour bien acheter</span></a></div>
+</div>
+<script data-pipe>Pipe.end(18, "https://www.lacentrale.fr/static/fragment-caution/caution-a6d91f19.js", {"primary":false,"id":18,"range":[18,18]})</script>
+</div>
+</section>
+<section class="containerSite containerContent cbm--hiddenPrint">
+<script data-pipe>Pipe.start(19)</script><script data-pipe>Pipe.end(19)</script>
+<script data-pipe>Pipe.start(20)</script>
+<style>
+/*html {
+  font-family: 'Lato', sans-serif;
+  -webkit-text-size-adjust: none;}
+
+.cara-crossLinking a,.cara-crossLinking a:hover,.cara-crossLinking a:visited{
+    color: #333;
+    text-decoration: none; 
+}*/
+.cara-crossLinking {
+  margin: 6px;
+}
+.cara-crossLinking__infos--tout, .cara-crossLinking__infos--forum, .cara-crossLinking__infos--avis,
+.cara-crossLinking figure {
+  display: flex;
+}
+.cara-crossLinking__infos--avis > a {
+  display: flex;
+}
+.cara-crossLinking__line {
+  width: 100%;
+  justify-content: space-between;
+}
+.cara-crossLinking__titre {
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom:2px solid #275591;
+}
+.cara-crossLinking__infos {
+  flex-basis: 22%;
+}
+.cara-crossLinking__infos--tout {
+  background: #EFF3F6;
+  padding: 15px 10px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 15px 0 10px;
+}
+.cara-crossLinking__infos--tout .cara-crossLinking__infosTitle {
+  font-weight: bold;
+  margin-left: 45px;
+}
+.cara-crossLinking__infos--tout .cara-crossLinking__infosMarque {
+  font-size: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .cara-crossLinking__infos--tout .cara-crossLinking__infosMarque {
+    font-size: 22px;
+  }
+}
+.cara-crossLinking__infos--forum, .cara-crossLinking__infos--avis {
+  margin-bottom: 10px;
+}
+.cara-crossLinking__infosSprite {
+  background: #275591;
+  flex-basis: 80px !important;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+.cara-crossLinking__articles figure {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  margin-left:0;
+}
+.cara-crossLinking__articles figcaption {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.cara-crossLinking__articles img {
+  width: 80px;
+  height: 60px;
+  margin-right: 10px;
+}
+.cara-crossLinking__partner {
+  text-align: right; 
+}
+.cara-crossLinking__partner img {
+    margin-left: 5px; 
+    vertical-align: middle;
+}
+@media only screen and (min-width: 1200px) {
+  .cara-crossLinking {
+    margin: 0;
+  }
+  .cara-crossLinking__line, .cara-crossLinking__infos--tout, .cara-crossLinking__infos--forum, .cara-crossLinking__infos--avis, .cara-crossLinking__articles {
+    display: flex;
+  }
+  .cara-crossLinking__infos {
+    flex-basis: 30%;
+    margin-right: 10px; 
+  }
+  .cara-crossLinking__infos__infos--tout {
+    margin-right: 10px;
+  }
+.cara-crossLinking__articles {
+    flex-basis: 70%; 
+  }
+  .cara-crossLinking__articles a {
+    margin: 0 auto; 
+  }
+  .cara-crossLinking__articles a:first-child {
+    padding-right: 5px;
+  }
+  .cara-crossLinking__articles a:nth-child(2n) {
+    padding: 0 5px;
+  }
+  .cara-crossLinking__articles a:last-child {
+    padding-left: 5px;
+  }
+  .cara-crossLinking__articles figure {
+    display: table;
+    margin-top: 15px;
+  }  
+  .cara-crossLinking__articles img {
+    width: 100%;
+    height: 176px;
+    margin-right: 0;
+  }
+  .cara-crossLinking__articles figcaption {
+    display: table-caption;
+    caption-side: bottom;
+  }
+}
+</style>
+<div class="cara-crossLinking">
+<h2 class="cara-crossLinking__titre">
+Lire aussi sur Bmw Serie 1 F20 5 Portes </h2>
+<div class="cara-crossLinking__line">
+<div class="cara-crossLinking__infos">
+<div data-pub-appnexus="LienTxtModele"></div>
+<a target="_blank" class="cara-crossLinking__infos--link" data-xtclick='{"label":"cara::automodele", "typeClick":"exit", "autoPrefix":"true"}' href="https://www.caradisiac.com/modele--bmw-serie-1-f20-5-portes/">
+<div class="cara-crossLinking__infos--tout">
+<img src="https://images.caradisiac.com/logos-ref/auto/auto--bmw.png" height="36"> <span class="cara-crossLinking__infosTitle">
+Tout sur <span class="cara-crossLinking__infosMarque">Bmw Serie 1 F20 5 Portes</span>
+</span>
+</div>
+</a>
+<a target="_blank" data-xtclick='{"label":"cara::autoforum", "typeClick":"exit", "autoPrefix":"true"}' href="http://forum-auto.caradisiac.com/marques/bmw/debut-Serie-1.htm">
+<div class="cara-crossLinking__infos--forum">
+<img src="https://static.caradisiac.com/img_site/blocLC/pic_forum_60.jpg" width="80" height="60" class="cara-crossLinking__infosSprite">
+<span>
+<strong>Forum</strong>
+<br>
+Des questions sur Bmw Serie 1 ? Consultez notre forum </span>
+</div>
+</a>
+<div class="cara-crossLinking__infos--avis">
+<a target="_blank" data-xtclick='{"label":"cara::autoavis", "typeClick":"exit", "autoPrefix":"true"}' href="https://www.caradisiac.com/auto--bmw/avis/" class="cbm-flexLiner">
+<img src="https://static.caradisiac.com/img_site/blocLC/pic_avis_60.jpg" width="80" height="60" class="cara-crossLinking__infosSprite">
+<span>
+<strong>Avis de propriétaires</strong>
+<br>
+Consultez les avis de propriétaires de Bmw </span>
+</a>
+</div>
+</div>
+<div class="cara-crossLinking__articles">
+<a target="_blank" data-xtclick='{"label":"cara::emplacement1_auto", "typeClick":"exit", "autoPrefix":"true"}' href="https://www.caradisiac.com/Essai-BMW-116-d-la-beheme-du-peuple-103463.htm">
+<figure class="cara-crossLinking__articles--essais">
+<img src="https://images.caradisiac.com/logos/6/9/9/2/186992/S5-Essai-BMW-116-d-la-beheme-du-peuple-103463.jpg"><figcaption>Essai - BMW 116 d : la béhème du peuple</figcaption> </figure>
+</a>
+<a target="_blank" data-xtclick='{"label":"cara::emplacement2_auto", "typeClick":"exit", "autoPrefix":"true"}' href="https://www.caradisiac.com/fiabilite-de-la-bmw-serie-1-f20-f21-2011-la-maxi-fiche-occasion-de-caradisiac-184091.htm">
+<figure class="cara-crossLinking__articles--fiche">
+<img src="https://images.caradisiac.com/logos/1/1/1/3/261113/S5-fiabilite-de-la-bmw-serie-1-f20-f21-2011-la-maxi-fiche-occasion-de-caradisiac-184091.jpg"><figcaption>Fiabilité de la BMW Série 1 "F20/F21" (2011) : la maxi-fiche occasion de Caradisiac</figcaption> </figure>
+</a>
+<a target="_blank" data-xtclick='{"label":"cara::emplacement3_auto", "typeClick":"exit", "autoPrefix":"true"}' href="https://www.caradisiac.com/comparatif-mercedes-classe-a-2018-vs-audi-a3-sportback-et-bmw-serie-1-une-question-de-domination-168204.htm">
+<figure class="cara-crossLinking__articles--comparatif">
+<img src="https://images.caradisiac.com/logos/6/7/0/3/246703/S5-comparatif-mercedes-classe-a-2018-vs-audi-a3-sportback-et-bmw-serie-1-une-question-de-domination-168204.jpg"><figcaption>Comparatif - Mercedes Classe A (2018) vs Audi A3 Sportback et BMW Série 1 : une question de domination</figcaption> </figure>
+</a>
+</div>
+</div>
+<div class="cara-crossLinking__partner">
+<span>
+En partenariat avec <img src="https://static.caradisiac.com/img_site/blocLC/pic_caraLogoMini.png">
+</span>
+</div>
+</div>
+<script data-pipe>Pipe.end(20)</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr//static/fragment-recherche-front/similarClassifieds.5c78e16f.css"><script data-pipe>Pipe.start(21, "https://www.lacentrale.fr//static/fragment-recherche-front/similarClassifieds.90afe98f.js", {"primary":false,"id":21,"range":[21,21]})</script><div id="recherche-react-similarClassifieds"><div><div class="cbm--searchCarousel"><div class="headerSection headerSection-underline"><h2 class="titleSection">Annonces similaires : BMW SERIE 1 F20 5 PORTES</h2></div><div class="slick-slider cbm-searchCarousel slick-initialized" dir="ltr"><div class="slick-arrow slick-prev slick-disabled cbm__thumbsArrow--prev" style="display:block"><span height="40" class="icon-wrapper"><span class="icon"><svg width="40" height="40" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#000" d="M8.828 12.9l8.486 8.485-1.415 1.414L6 12.899 15.9 3l1.414 1.414z"></path></g></svg></span></span></div><div class="slick-list"><div class="slick-track" style="width:200%;left:0%"><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-69107676902.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/E107676902_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 21 980 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT</div></div><div class="cbm-searchCarousel__Price">21 980 €</div></div></div></a></div></div></div><div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-87101918829.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/W101918829_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 20 900 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT</div></div><div class="cbm-searchCarousel__Price">20 900 €</div></div></div></a></div></div></div><div data-index="2" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-87101870287.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/W101870287_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 21 900 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 118I M SPORT ULTIMATE 5P</div></div><div class="cbm-searchCarousel__Price">21 900 €</div></div></div></a></div></div></div><div data-index="3" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-66101416996.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/B101416996_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 25 990 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT ULTIMATE</div></div><div class="cbm-searchCarousel__Price">25 990 €</div></div></div></a></div></div></div><div data-index="4" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-87101906306.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/W101906306_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 18 490 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I LOUNGE 5P</div></div><div class="cbm-searchCarousel__Price">18 490 €</div></div></div></a></div></div></div><div data-index="5" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-87101922355.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/W101922355_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 19 880 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT</div></div><div class="cbm-searchCarousel__Price">19 880 €</div></div></div></a></div></div></div><div data-index="6" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-87101918057.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/W101918057_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 18 780 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I LOUNGE 5P</div></div><div class="cbm-searchCarousel__Price">18 780 €</div></div></div></a></div></div></div><div data-index="7" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-66101418272.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://static.lacentrale.fr/images/lc_fr/listing_nophoto.png" alt="BMW SERIE 1 F20 5 PORTES 24 000 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT ULTIMATE</div></div><div class="cbm-searchCarousel__Price">24 000 €</div></div></div></a></div></div></div><div data-index="8" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-66101405343.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/B101405343_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 23 000 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT</div></div><div class="cbm-searchCarousel__Price">23 000 €</div></div></div></a></div></div></div><div data-index="9" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-69107774193.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/E107774193_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 21 980 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT</div></div><div class="cbm-searchCarousel__Price">21 980 €</div></div></div></a></div></div></div><div data-index="10" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-69107763233.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/E107763233_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 22 860 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I URBANCHIC 5P</div></div><div class="cbm-searchCarousel__Price">22 860 €</div></div></div></a></div></div></div><div data-index="11" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-87101908722.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/W101908722_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 20 900 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT</div></div><div class="cbm-searchCarousel__Price">20 900 €</div></div></div></a></div></div></div><div data-index="12" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-87101809153.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://image.lacentrale.fr/260x195/W101809153_STANDARD_0.jpg" alt="BMW SERIE 1 F20 5 PORTES 18 900 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I LOUNGE 5P</div></div><div class="cbm-searchCarousel__Price">18 900 €</div></div></div></a></div></div></div><div data-index="13" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:7.142857142857143%"><div><div><a href="/undefined-occasion-annonce-69107612075.html" data-xtclick="{&quot;label&quot;:&quot;detailPA::dernieresannonces&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}"><div class="cbm-searchCarousel__slide "><div class="cbm-searchCarousel__Thumb"><img src="https://static.lacentrale.fr/images/lc_fr/listing_nophoto.png" alt="BMW SERIE 1 F20 5 PORTES 21 995 €"/></div><div class="cbm-searchCarousel__Text"><div class="cbm-searchCarousel__MakeModel"><div>BMW SERIE 1 F20 5 PORTES</div></div><div class="cbm-searchCarousel__Version"><div>(F20) (2) 116I M SPORT</div></div><div class="cbm-searchCarousel__Price">21 995 €</div></div></div></a></div></div></div></div></div><div class="slick-arrow slick-next cbm__thumbsArrow--next" style="display:block"><span height="40" class="icon-wrapper"><span class="icon icon-rotation--180"><svg width="40" height="40" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#000" d="M8.828 12.9l8.486 8.485-1.415 1.414L6 12.899 15.9 3l1.414 1.414z"></path></g></svg></span></span></div></div></div></div></div><script>window.__PRELOADED_STATE_SIMILAR_CLASSIFEDS__ = {"pageMode":{"mode":"similarClassifieds","page":null},"device":{"deviceType":null,"deviceOS":null,"browserIsEdge":false},"similarClassifieds":{"hits":[{"reference":"E107676902","make":"BMW","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":15,"price":21980},{"reference":"W101918829","make":"BMW","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":49,"price":20900},{"reference":"W101870287","make":"BMW","version":"(F20) (2) 118I M SPORT ULTIMATE 5P","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":16,"price":21900},{"reference":"B101416996","make":"BMW","version":"(F20) (2) 116I M SPORT ULTIMATE","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":5,"price":25990},{"reference":"W101906306","make":"BMW","version":"(F20) (2) 116I LOUNGE 5P","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":6,"price":18490},{"reference":"W101922355","make":"BMW","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":28,"price":19880},{"reference":"W101918057","make":"BMW","version":"(F20) (2) 116I LOUNGE 5P","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":49,"price":18780},{"reference":"B101418272","make":"BMW","version":"(F20) (2) 116I M SPORT ULTIMATE","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":0,"price":24000},{"reference":"B101405343","make":"BMW","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":6,"price":23000},{"reference":"E107774193","make":"BMW","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":14,"price":21980},{"reference":"E107763233","make":"BMW","version":"(F20) (2) 116I URBANCHIC 5P","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":20,"price":22860},{"reference":"W101908722","make":"BMW","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":17,"price":20900},{"reference":"W101809153","make":"BMW","version":"(F20) (2) 116I LOUNGE 5P","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":12,"price":18900},{"reference":"E107612075","make":"BMW","version":"(F20) (2) 116I M SPORT","commercialName":"SERIE 1 F20 5 PORTES","category":"COMPACTE","picturesDataCountValid":0,"price":21995}],"make":"BMW","commercialName":"SERIE 1 F20 5 PORTES","status":"loaded"}}</script><script data-pipe>Pipe.end(21, "https://www.lacentrale.fr//static/fragment-recherche-front/similarClassifieds.90afe98f.js", {"primary":false,"id":21,"range":[21,21]})</script>
+</section>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/footer-f1f0472d.css"><script data-pipe>Pipe.start(22, "https://www.lacentrale.fr/static/fragment-layout/footer-f1f0472d.js", {"primary":false,"id":22,"range":[22,22]})</script><footer class="containerSite containerFooter cbm--hiddenPrint">
+<section>
+<section class="line line1">
+<div class="col col1 cbm--clearPhone">
+<h3 class="footerTitle cbm-size--3">Nous contacter</h3>
+<div class="footerContent">
+<ul>
+<li>
+<span>
+<span class="circ circ50 cbm-bg--3 b0">
+<i class="cbm-picto--mailWhite" style="transform:scale(1.2);"></i>
+</span>
+</span>
+<span>
+<a href="https://www.lacentrale.fr/nous-contacter.php" rel="nofollow">
+<strong> Par email </strong>
+<br/>
+ou par courrier
+</a>
+</span>
+</li>
+<li class="footerProAccess">
+<div>
+Vous &ecirc;tes un Pro ?
+</div>
+<div>
+<a href="https://pilot.lacentrale.fr" class="cbm-btn--2" target="_blank" rel="noopener noreferrer" data-xtclick='{"label":"Footer::AccesPro::bouton", "typeClick":"navigation"}'>
+Accès client pro
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col col2 cbm--clearPhone">
+<h3 class="footerTitle cbm-size--3"> La Centrale <sup>&reg;</sup> sur votre mobile </h3>
+<div class="footerContent">
+<div>
+D&eacute;sormais &agrave; port&eacute;e de main sur <br/>
+iOS et Android.
+</div>
+<div>
+<a href="https://itunes.apple.com/fr/app/la-centrale-voiture-doccasion/id392283088?mt=8&amp;amp;xtor&#x3D;AD-1-[Footer]---[https://www.lacentrale.fr]--[LC]" target="_blank" class="mR10">
+<i class="cbm-sprite--applisApple" title="Disponible pour iPhone App Store"></i>
+</a>
+<a href="https://play.google.com/store/apps/details?id=fr.carboatmedia.lacentrale&amp;amp;referrer&#x3D;https://www.lacentrale.fr&amp;amp;xtor&#x3D;AD-1-[Footer]---[https://www.lacentrale.fr]--[LC]" target="_blank" class="mR10">
+<i class="cbm-sprite--applisGoogle" title="Android App sur Google Play"></i>
+</a>
+</div>
+<div>
+<a href="/informations/applications" class="cbm-btn--4 cbm-btn--apps hiddenPhone" data-xtclick='{"xtn2":"65", "label":"Vers_promo_apps_mobiles::Bas", "typeClick":"navigation"}'>
+&gt; D&eacute;couvrir nos applications
+</a>
+</div>
+</div>
+</div>
+<div class="col col3 hiddenPhone">
+<h3 class="footerTitle cbm-size--3"> &Agrave; propos </h3>
+<div class="footerContent">
+<ul>
+<li>
+<a href="https://www.lacentrale.fr/informations/qui-sommes-nous" title="La Centrale &reg;">
+Qui sommes nous ?
+</a>
+</li>
+<li>
+<a href="https://www.groupelacentrale.fr/#rejoignez_nous" target="_blank">
+Nos offres d'emplois
+</a>
+</li>
+<li>
+<a href="/informations/spot" data-xtclick='{"xtn2":"65", "label":"Spot-LC", "typeClick":"navigation"}'>
+Pub La Centrale <sup>&reg;</sup>
+</a>
+</li>
+<li>
+<a href="https://www.drivemedia.fr/" target="_blank">
+Devenir annonceur
+</a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="line line2">
+<ul>
+<li><a href="https://www.lacentrale.fr/informations/conditions-generales" rel="nofollow">Conditions g&eacute;n&eacute;rales</a></li>
+<li><a href="https://www.lacentrale.fr/informations/mentions-legales" rel="nofollow">Mentions l&eacute;gales</a></li>
+<li><a href="https://www.lacentrale.fr/informations/information-classement" rel="nofollow">Information sur le classement</a></li>
+<li><a href="https://www.lacentrale.fr/informations/charte-cookies" rel="nofollow">Charte cookies</a></li>
+<li><a href="https://www.lacentrale.fr/informations/politique-confidentialite" rel="nofollow">Politique de confidentialit&eacute;</a></li>
+<li><a href="https://www.lacentrale.fr/static/fragment-layout/charte_redactionnelle-0effccfe.pdf" rel="nofollow" target="_blank">Charte r&eacute;dactionnelle</a></li>
+<li><a href="https://www.lacentrale.fr/informations/plan-du-site">Plan du site</a></li>
+</ul>
+</section>
+<section class="line line3 cbm-size--1" id="copyright">
+Copyright &copy;
+<a href="http://www.groupelacentrale.fr/" title="Groupe La Centrale" target="_blank">Groupe La Centrale</a>
+&nbsp;-&nbsp;
+Tous droits r&eacute;serv&eacute;s
+</section>
+</section>
+<section class="line line4 hiddenPhone">
+<h3 class="footerTitle cbm-size--3"> Sites du groupe : </h3>
+<div class="footerContent">
+<ul>
+<li>
+<a href="https://www.caradisiac.com" target="_blank">
+Actualit&eacute; automobile <span> <i class="cbm-sprite--partnersCaradisiac"></i> </span>
+</a>
+</li>
+<li>
+<a href="https://forum-auto.caradisiac.com" target="_blank">
+Forum auto <span> <i class="cbm-sprite--partnersForumAuto"></i> </span>
+</a>
+</li>
+<li>
+Voitures neuves <span> <i class="cbm-sprite--partnersPromoneuve"></i> </span>
+</li>
+<li>
+Rachat de voiture <span> <i class="cbm-sprite--partnersMVC"></i> </span>
+</li>
+</ul>
+</div>
+</section>
+</footer>
+<script>var fragment_footer_locals = '{&quot;isTestPage&quot;:false,&quot;vertical&quot;:&quot;auto&quot;,&quot;site&quot;:{&quot;commandersAct&quot;:{&quot;label&quot;:&quot;LC&quot;},&quot;appTracker&quot;:{&quot;label&quot;:&quot;LC&quot;}},&quot;page&quot;:{&quot;id&quot;:&quot;classified&quot;,&quot;section&quot;:&quot;classified&quot;,&quot;xiti&quot;:{&quot;mvTesting&quot;:{}}}}';</script>
+<script>
+
+  (function() {
+
+    'use strict';
+
+    if (typeof jQuery === 'function') {
+
+
+      // Chargement de Module Event
+
+      var moduleEventUrl      = "https://www.lacentrale.fr/static/fragment-layout/event-72342adb.js",
+          moduleEventFunction = function(){ ModuleEvent.init('https://www.lacentrale.fr'); };
+
+      $.getScript(moduleEventUrl, moduleEventFunction);
+
+    }
+
+  })();
+
+</script>
+<script>
+  window.readCookie = function readCookie(name) {
+    var nameEQ = "".concat(name, "=");
+    var ca = document.cookie.split(';');
+
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1, c.length);
+      }
+
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+
+    return null;
+  };
+
+  window.createCookie = function createCookie(name, value, days) {
+    var expires = '';
+
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = "; expires=".concat(date.toGMTString());
+    }
+
+    document.cookie = "".concat(name, "=").concat(value).concat(expires, "; path=/; samesite");
+  };
+
+  window._sp_ = {
+    config: {
+      accountId: 1348,
+      wrapperAPIOrigin: "https://wrapper-api.sp-prod.net/tcfv2",
+      mmsDomain: "https://message1348.sp-prod.net",
+      domainName: "LC",
+      events: {
+        onMessageChoiceSelect: function (choice_id, choice_type_id) {
+          switch (choice_type_id) {
+            case 11:
+              kvalueTarget = 'pubOk';
+              break;
+            case 13:
+              kvalueTarget = 'pubKo';
+              break;
+            default:
+              kvalueTarget = window.readCookie('kvalueTarget');
+              break;
+          }
+
+          window.createCookie('kvalueTarget', kvalueTarget);
+        },
+        onPrivacyManagerAction: function (pmData) {
+          if (pmData.purposeConsent === 'none' && pmData.vendorConsent === 'none') {
+            kvalueTarget = 'pubKo';
+          } else {
+            kvalueTarget = 'pubOk';
+          }
+          window.createCookie('kvalueTarget', kvalueTarget);
+        },
+        onPMCancel: function () {
+          window.createCookie('kvalueTarget', 'pubKo');
+        }
+      }
+    }
+  }
+</script>
+<script src="https://gdpr-tcfv2.sp-prod.net/wrapperMessagingWithoutDetection.js"></script>
+<script data-pipe>Pipe.end(22, "https://www.lacentrale.fr/static/fragment-layout/footer-f1f0472d.js", {"primary":false,"id":22,"range":[22,22]})</script>
+</section>
+<div class="hide cbm-popinsWrapper">
+<script data-pipe>Pipe.start(23, "https://www.lacentrale.fr/static/fragment-contact/main-informations-price-evolution-eaa24a2f.js", {"primary":false,"id":23,"range":[23,23]})</script><div id="mainInformationsPriceEvolution"></div>
+<script>
+    (function(key, value) {
+      (window.CBM || (window.CBM = {})) && (window.CBM[key] = value);
+    })("MAIN_INFORMATIONS_PRICE_EVOLUTION_PROPS", {"history":[20900,20900],"initial":20900,"current":20900,"percentage":0,"daysSinceLastPriceVariation":0,"displayedAge":23,"isAgeCapped":false})
+  </script>
+<script data-pipe>Pipe.end(23, "https://www.lacentrale.fr/static/fragment-contact/main-informations-price-evolution-eaa24a2f.js", {"primary":false,"id":23,"range":[23,23]})</script>
+</div>
+</body></html>

@@ -1,7 +1,7 @@
-package crawler
+package website
 
 import "fmt"
 
-func sum() {
+func add() {
 	fmt.Print("aaa")
 }
